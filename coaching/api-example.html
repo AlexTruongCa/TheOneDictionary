@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Fetch Example</title>
+</head>
+<body>
+
+<h2>API Fetch Example</h2>
+<button id="fetchButton">Fetch Data</button>
+<div id="output"></div>
+
+<script>
+    document.getElementById('fetchButton').addEventListener('click', fetchData);
+
+    const fetchData = async () => {
+        // Replace with your API endpoint
+        const API_ENDPOINT = 'https://the-one-api.dev/v2';
+
+        try {
+            const response = await fetch(API_ENDPOINT, {
+                method: 'GET',
+                headers: {
+                    'Authorization': 'Bearer your-api-key-123'
+                }
+            });
+            
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const data = await response.json();
+            document.getElementById('output').innerHTML = JSON.stringify(data, null, 2);
+        } catch (error) {
+            console.log('There was a problem with the fetch operation:', error.message);
+            document.getElementById('output').innerHTML = 'Error fetching data.';
+        }
+    }
+</script>
+
+</body>
+</html>
