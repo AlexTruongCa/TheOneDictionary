@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Page</title>
+  </head>
+  <body>
+
+    <h1>Data Page</h1>
+    <!-- Button to navigate back -->
+    <button onclick="navigateBack()">Go Back to Home Page</button>
+    <div id="dataContainer">No data passed</div> <!-- Default text -->
+
+    <script>
+      window.onload = function() {
+          var data = localStorage.getItem('myDataKey'); // Retrieve the data from local storage
+          if(data) {
+              document.getElementById('dataContainer').textContent = data; // Display the data
+          }
+      }
+    
+      function navigateBack() {
+          window.location.href = 'index.html'; // Navigate back to home page
+      }
+    </script>
+  </body>
+</html>
