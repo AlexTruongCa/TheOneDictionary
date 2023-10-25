@@ -12,31 +12,35 @@
 <div id="output"></div>
 
 <script>
-    document.getElementById('fetchButton').addEventListener('click', fetchData);
+    
 
     const fetchData = async () => {
         // Replace with your API endpoint
-        const API_ENDPOINT = 'https://the-one-api.dev/v2/book';
+        const API_ENDPOINT = 'https://the-one-api.dev/v2/character';
 
         try {
             const response = await fetch(API_ENDPOINT, {
                 method: 'GET',
                 headers: {
-                    'Authorization': 'Bearer your-api-key-123'
+                    'Authorization': 'Bearer ymZ1I87HakbB-ZlOQInZ'
                 }
             });
             
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-
             const data = await response.json();
+            //const parsed = JSON.parse(data);
+            console.log(data);
+
             document.getElementById('output').innerHTML = JSON.stringify(data, null, 2);
         } catch (error) {
             console.log('There was a problem with the fetch operation:', error.message);
             document.getElementById('output').innerHTML = 'Error fetching data.';
         }
     }
+
+    document.getElementById('fetchButton').addEventListener('click', fetchData);
 </script>
 
 </body>

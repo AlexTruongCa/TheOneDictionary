@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Race-display</title>
+  <link rel="stylesheet" href="style-race.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bilbo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <nav>
+    <h4>The<span>One</span>Dictionary</h4>
+    <div class="search-container">
+      <button type="submit" class="search-button">
+        <i class="fa fa-search"></i>
+      </button>
+      <input class="search-input" type="text" placeholder="Search">
+    </div>
+    <ul class="nav-links">
+      <li><a href="Home.html">Home</a></li> <!--<i class="fa fa-home"></i>-->
+      <li><a href="#">About</a></li> <!--<i class="fa fa-user"></i>-->
+      <li><a href="#">Contact</a></li> <!--<i class="fa fa-phone"></i>-->
+    </ul>
+    <div class="toggle-btn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="dropdown">
+      <li><a href="#">Home</a></li> <!--<i class="fa fa-home"></i>-->
+      <li><a href="#">About</a></li> <!--<i class="fa fa-user"></i>-->
+      <li><a href="#">Contact</a></li> <!--<i class="fa fa-phone"></i>-->
+    </div>
+  </nav>
+
+  <div id="outputRace"></div>
+
+  <footer>
+    <p>&copy; 2023 TheOneDictionary. All rights reserved.</p>
+  </footer>
+  
+  <script>
+  //Nav Bar
+  const toggleBtn = document.querySelector('.toggle-btn')
+  const toggleBtnIcon = document.querySelector('.toggle-btn i')
+  const dropDownMenu = document.querySelector('.dropdown')
+
+  toggleBtn.onclick = function (){
+    dropDownMenu.classList.toggle('open')
+    const isOpen = dropDownMenu.classList.contains('open')
+
+    toggleBtnIcon.classList = isOpen
+    ? 'fa-solid fa-xmark'
+    : 'fa-solid fa-bars'
+  }
+
+  // Extract the 'race' query parameter from the URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const race = urlParams.get('race');
+
+  // Function to fetch and display data for the specified race
+  const fetchDataForRace = async () => {
+  const API_ENDPOINT = `https://the-one-api.dev/v2/character?race=${race}`;
+
+  try {
+    const response = await fetch(API_ENDPOINT, {
+      method: 'GET',
+      headers: {
+        'Authorization': 'Bearer ymZ1I87HakbB-ZlOQInZ'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+  const data = await response.json();
+  const characterData = data.docs;
+  console.log(data);
+
+  // Display the fetched data in the outputRace div
+  const outputRace = document.getElementById('outputRace');
+    if (characterData.length > 0) {
+      const characterNames = characterData.map(character => `<p>${character.name}</p>`);
+      outputRace.innerHTML = characterNames.join('');
+    } else {
+      outputRace.innerHTML = 'No characters found for this race.';
+    }
+  } catch (error) {
+    console.error('There was a problem with the fetch operation:', error);
+    document.getElementById('outputRace').innerHTML = 'Error fetching data.';
+  }
+};
+
+  // Call the fetchDataForRace function when the page loads
+  window.addEventListener('load', fetchDataForRace);
+    
+</script>
+
+</body>
+</html>

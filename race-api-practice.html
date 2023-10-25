@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Races API</title>
+</head>
+<body>
+  <a id="valarButton" href="#" onclick="characterRace('Ainur','outputValar')">Valar</a>
+  <div id="outputValar"></div>
+  
+  <a id="maiarButton" href="#" onclick="characterRace('Maiar','outputMaiar')">Maiar</a>
+  <div id="outputMaiar"></div>
+
+  <a id="elfButton" href="#" onclick="characterRace('Elf,Elves','outputElf')">Elves</a>
+  <div id="outputElf"></div>
+
+  <a id="dwarfButton" href="#" onclick="characterRace('Dwarf, Dwarves','outputDwarf')">Dwarves</a>
+  <div id="outputDwarf"></div>
+
+  <a id="humanButton" href="#" onclick="characterRace('Human, Men','outputHuman')">Men</a>
+  <div id="outputHuman"></div>
+
+  <a id="hobbitButton" href="#" onclick="characterRace('Hobbit','outputHobbit')">Hobbits</a>
+  <div id="outputHobbit"></div>
+
+  <a id="orcButton" href="#" onclick="characterRace('Orc, Orcs','outputOrc')">Orcs</a>
+  <div id="outputOrc"></div>
+
+
+
+<script>
+  //extracting all characterRace characters
+  const characterRace = async (prams, outputRace) => {
+    const API_ENDPOINT = `https://the-one-api.dev/v2/character?race=${prams}`;
+
+  try {
+    const response = await fetch (API_ENDPOINT , {
+      method: 'GET',
+      headers: {
+        'Authorization': 'Bearer ymZ1I87HakbB-ZlOQInZ'
+      }
+    });
+    
+    if (!response.ok) {
+    // Handle the case when the response is not OK (e.g., an error occurred).
+      throw new Error ('Network response was not ok');
+    }
+    const data = await response.json();
+    console.log(data);
+    //Extract data containing the whole array with objects
+    document.getElementById(outputRace).innerHTML = JSON.stringify(data); 
+
+    localStorage.setItem('character',JSON.stringify(data));
+
+    // Extract and list the names
+    const names = data.docs.map(character => `<li>${character.name}</li>`); //data.docs contains the character objects and .map() method to extract the 'name' property
+    const namesList = names.join(''); // Create a line break-separated list
+    
+    // Display the list of names in the HTML
+    document.getElementById(outputRace).innerHTML = namesList;
+  }
+  
+    catch (error) {
+      console.log('There was a problem with the fetch operation:', error.message);
+      document.getElementById(outputRace).innerHTML = 'Error fetching data.';
+    }
+  }
+  // document.getElementById('valarButton').addEventListener('click',characterRace('Ainur'));
+  
+// //extracting all MAIAR characters
+// const Maiar = async () => {
+//     const API_ENDPOINT = 'https://the-one-api.dev/v2/character?race=Maiar';
+
+//   try {
+//     const response = await fetch (API_ENDPOINT , {
+//       method: 'GET',
+//       headers: {
+//         'Authorization': 'Bearer ymZ1I87HakbB-ZlOQInZ'
+//       }
+//     });
+    
+//     if (!response.ok) {
+//     // Handle the case when the response is not OK (e.g., an error occurred).
+//       throw new Error ('Network response was not ok');
+//     }
+//     const data = await response.json();
+//     console.log(data);
+//     //Extract data containing the whole array with objects
+//     document.getElementById('outputMaiar').innerHTML = JSON.stringify(data); 
+
+//     // Extract and list the names
+//     const names = data.docs.map(character => `<li>${character.name}</li>`); //data.docs contains the character objects and .map() method to extract the 'name' property
+//     const namesList = names.join(''); // Create a line break-separated list
+    
+//     // Display the list of names in the HTML
+//     document.getElementById('outputMaiar').innerHTML = namesList;
+//   }
+  
+//     catch (error) {
+//       console.log('There was a problem with the fetch operation:', error.message);
+//       document.getElementById('outputMaiar').innerHTML = 'Error fetching data.';
+//     }
+//   }
+//   // document.getElementById('maiarButton').addEventListener('click',Maiar);
+
+//   //extracting all ELVES characters
+// const Elves = async () => {
+//     const API_ENDPOINT = 'https://the-one-api.dev/v2/character?race=Elf,Elves';
+
+//   try {
+//     const response = await fetch (API_ENDPOINT , {
+//       method: 'GET',
+//       headers: {
+//         'Authorization': 'Bearer ymZ1I87HakbB-ZlOQInZ'
+//       }
+//     });
+    
+//     if (!response.ok) {
+//     // Handle the case when the response is not OK (e.g., an error occurred).
+//       throw new Error ('Network response was not ok');
+//     }
+//     const data = await response.json();
+//     console.log(data);
+//     //Extract data containing the whole array with objects
+//     document.getElementById('outputElf').innerHTML = JSON.stringify(data); 
+
+//     // Extract and list the names
+//     const names = data.docs.map(character => `<li>${character.name}</li>`); //data.docs contains the character objects and .map() method to extract the 'name' property
+//     const namesList = names.join(''); // Create a line break-separated list
+    
+//     // Display the list of names in the HTML
+//     document.getElementById('outputElf').innerHTML = namesList;
+//   }
+  
+//     catch (error) {
+//       console.log('There was a problem with the fetch operation:', error.message);
+//       document.getElementById('outputElf').innerHTML = 'Error fetching data.';
+//     }
+//   }
+//   // document.getElementById('elfButton').addEventListener('click',Elves);
+
+// //extracting all DRAWVES characters
+// const Drawves = async () => {
+//     const API_ENDPOINT = 'https://the-one-api.dev/v2/character?race=Dwarf,Dwarves';
+
+//   try {
+//     const response = await fetch (API_ENDPOINT , {
+//       method: 'GET',
+//       headers: {
+//         'Authorization': 'Bearer ymZ1I87HakbB-ZlOQInZ'
+//       }
+//     });
+    
+//     if (!response.ok) {
+//     // Handle the case when the response is not OK (e.g., an error occurred).
+//       throw new Error ('Network response was not ok');
+//     }
+//     const data = await response.json();
+//     console.log(data);
+//     //Extract data containing the whole array with objects
+//     document.getElementById('outputDwarf').innerHTML = JSON.stringify(data); 
+
+//     // Extract and list the names
+//     const names = data.docs.map(character => `<li>${character.name}</li>`); //data.docs contains the character objects and .map() method to extract the 'name' property
+//     const namesList = names.join(''); // Create a line break-separated list
+    
+//     // Display the list of names in the HTML
+//     document.getElementById('outputDwarf').innerHTML = namesList;
+//   }
+  
+//     catch (error) {
+//       console.log('There was a problem with the fetch operation:', error.message);
+//       document.getElementById('outputDwarf').innerHTML = 'Error fetching data.';
+//     }
+//   }
+//   // document.getElementById('dwarfButton').addEventListener('click',Drawves);
+
+// //extracting all MEN characters
+// const Men = async () => {
+//     const API_ENDPOINT = 'https://the-one-api.dev/v2/character?race=Human,Men';
+
+//   try {
+//     const response = await fetch (API_ENDPOINT , {
+//       method: 'GET',
+//       headers: {
+//         'Authorization': 'Bearer ymZ1I87HakbB-ZlOQInZ'
+//       }
+//     });
+    
+//     if (!response.ok) {
+//     // Handle the case when the response is not OK (e.g., an error occurred).
+//       throw new Error ('Network response was not ok');
+//     }
+//     const data = await response.json();
+//     console.log(data);
+//     //Extract data containing the whole array with objects
+//     document.getElementById('outputHuman').innerHTML = JSON.stringify(data); 
+
+//     // Extract and list the names
+//     const names = data.docs.map(character => `<li>${character.name}</li>`); //data.docs contains the character objects and .map() method to extract the 'name' property
+//     const namesList = names.join(''); // Create a line break-separated list
+    
+//     // Display the list of names in the HTML
+//     document.getElementById('outputHuman').innerHTML = namesList;
+//   }
+  
+//     catch (error) {
+//       console.log('There was a problem with the fetch operation:', error.message);
+//       document.getElementById('outputHuman').innerHTML = 'Error fetching data.';
+//     }
+//   }
+//   // document.getElementById('humanButton').addEventListener('click',Men);
+
+// //extracting all Hobbits characters
+// const Hobbit = async () => {
+//     const API_ENDPOINT = 'https://the-one-api.dev/v2/character?race=Hobbit,hobbits';
+
+//   try {
+//     const response = await fetch (API_ENDPOINT , {
+//       method: 'GET',
+//       headers: {
+//         'Authorization': 'Bearer ymZ1I87HakbB-ZlOQInZ'
+//       }
+//     });
+    
+//     if (!response.ok) {
+//     // Handle the case when the response is not OK (e.g., an error occurred).
+//       throw new Error ('Network response was not ok');
+//     }
+//     const data = await response.json();
+//     console.log(data);
+//     //Extract data containing the whole array with objects
+//     document.getElementById('outputHobbit').innerHTML = JSON.stringify(data); 
+
+//     // Extract and list the names
+//     const names = data.docs.map(character => `<li>${character.name}</li>`); //data.docs contains the character objects and .map() method to extract the 'name' property
+//     const namesList = names.join(''); // Create a line break-separated list
+    
+//     // Display the list of names in the HTML
+//     document.getElementById('outputHobbit').innerHTML = namesList;
+//   }
+  
+//     catch (error) {
+//       console.log('There was a problem with the fetch operation:', error.message);
+//       document.getElementById('outputHobbit').innerHTML = 'Error fetching data.';
+//     }
+//   }
+//   // document.getElementById('hobbitButton').addEventListener('click',Hobbit);
+  
+// //extracting all Orc characters
+// const Orc = async () => {
+//     const API_ENDPOINT = 'https://the-one-api.dev/v2/character?race=Orcs,Orc';
+
+//   try {
+//     const response = await fetch (API_ENDPOINT , {
+//       method: 'GET',
+//       headers: {
+//         'Authorization': 'Bearer ymZ1I87HakbB-ZlOQInZ'
+//       }
+//     });
+    
+//     if (!response.ok) {
+//     // Handle the case when the response is not OK (e.g., an error occurred).
+//       throw new Error ('Network response was not ok');
+//     }
+//     const data = await response.json();
+//     console.log(data);
+//     //Extract data containing the whole array with objects
+//     document.getElementById('outputOrc').innerHTML = JSON.stringify(data); 
+
+//     // Extract and list the names
+//     const names = data.docs.map(character => `<li>${character.name}</li>`); //data.docs contains the character objects and .map() method to extract the 'name' property
+//     const namesList = names.join(''); // Create a line break-separated list
+    
+//     // Display the list of names in the HTML
+//     document.getElementById('outputOrc').innerHTML = namesList;
+//   }
+  
+//     catch (error) {
+//       console.log('There was a problem with the fetch operation:', error.message);
+//       document.getElementById('outputOrc').innerHTML = 'Error fetching data.';
+//     }
+//   }
+//   // document.getElementById('orcButton').addEventListener('click',Orc);
+
+</script>
+
+</body>
+</html>
+
+
+
