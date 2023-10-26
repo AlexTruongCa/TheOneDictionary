@@ -35,7 +35,7 @@
     </div>
   </nav>
 
-  <div id="outputRace"></div>
+  <div class="card-container" id="outputRace"></div>
 
   <footer>
     <p>&copy; 2023 TheOneDictionary. All rights reserved.</p>
@@ -83,10 +83,18 @@
   // Display the fetched data in the outputRace div
   const outputRace = document.getElementById('outputRace');
     if (characterData.length > 0) {
-      const characterNames = characterData.map(character => `<p>${character.name}</p>`);
-      outputRace.innerHTML = characterNames.join('');
+      const characterInfo = characterData.map(character => 
+      `<div class="character-card">
+        <p>Name: ${character.name}</p>
+        <p>Height: ${character.height}</p>
+        <p>Birth: ${character.birth}</p>
+        <p>Death: ${character.death}</p>
+        <p>Realm: ${character.realm}</p>
+        <p>Hair: ${character.hair}</p>
+        </div>`);
+      outputRace.innerHTML = characterInfo.join('');
     } else {
-      outputRace.innerHTML = 'No characters found for this race.';
+      outputRace.innerHTML = 'No characters found for this race';
     }
   } catch (error) {
     console.error('There was a problem with the fetch operation:', error);

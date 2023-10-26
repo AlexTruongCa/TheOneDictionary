@@ -41,7 +41,7 @@
     </div>
     <section class="container">
       <div class="races">
-        <p><a id="valarButton" href="Race-display.html?race=Ainur" target="_blank" onclick="characterRace('Ainur','outputValar')" class="race-link">Valar</a></p> <!--data-race="Ainur"-->      
+        <p><a id="valarButton" href="Race-display.html?race=Ainur" target="_blank" class="race-link">Valar</a></p> <!--data-race="Ainur"-->      
         <p><a href="Race-display.html?race=Maiar" target="_blank" class="race-link">Maiar</a></p> <!--data-race="Maiar"-->
         <p><a href="Race-display.html?race=Elf,Elves" target="_blank" class="race-link">Elves</a></p> <!--data-race="Elf"-->
         <p><a href="Race-display.html?race=Dwarf, Dwarves" target="_blank" class="race-link">Dwarves</a></p> <!--data-race="Dwarf"-->
@@ -57,7 +57,7 @@
       </div>
     </section>
   </div>
- 
+
   <section class="container2">
     <h1>TIME IN AMAN VERSUS IN ARDA</h1>
     <div class="container2-calculation">
@@ -67,7 +67,11 @@
             <p>Ratio</p>
           </div>
           <div class="year">
-            <input class="centered-input" type="number">
+            <label for="years"></label>
+            <select class="centered-input" name="years" id="years">
+              <option value="Valiant Years">144 : 1</option>
+              <option value="Sun Years">10 : 1</option>
+            </select>
           </div>
         </div>
         <div class="input-year">
