@@ -129,6 +129,15 @@ li a:hover{
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   margin: 5px;
   padding: 5px;
+  font-size: 1.5rem;
+}
+.character-card a{
+  color: black;
+  font-size: 1.5rem;
+  transition: all 0.5s ease;
+}
+.character-card a:hover{
+  color: rgb(207, 206, 125);
 }
 
 

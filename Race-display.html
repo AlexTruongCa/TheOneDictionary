@@ -85,12 +85,13 @@
     if (characterData.length > 0) {
       const characterInfo = characterData.map(character => 
       `<div class="character-card">
-        <p>Name: ${character.name}</p>
-        <p>Height: ${character.height}</p>
-        <p>Birth: ${character.birth}</p>
+        <p>Name: ${character.name !=='' ? character.name : 'N/A'}</p>
+        <p>Height: ${character.height || 'N/A'}</p>
+        <p>Birth: ${character.birth &&'N/A'}</p>
         <p>Death: ${character.death}</p>
         <p>Realm: ${character.realm}</p>
         <p>Hair: ${character.hair}</p>
+        <a href="${character.wikiUrl}">"Learn more"</a>
         </div>`);
       outputRace.innerHTML = characterInfo.join('');
     } else {
