@@ -79,7 +79,7 @@
             <p>Valiant Year</p>
           </div>
           <div class="year">
-            <input class="centered-input" type="number">
+            <input class="centered-input" type="number" id="valiantYearInput" min="0">
           </div>
         </div>
         <div class="input-year">
@@ -87,7 +87,7 @@
             <p>Sun Year</p>
           </div>
           <div class="year">
-            <input class="centered-input" type="number">
+            <input class="centered-input" type="number" id="sunYearInput" min="0">
           </div>
         </div>
       </div>
@@ -118,6 +118,19 @@
     : 'fa-solid fa-bars'
   }
 
+//Calculate time
+  
+    const selectElement = document.getElementById("years");
+    const valiantYearInput = document.getElementById("valiantYearInput");
+    const sunYearInput = document.getElementById("sunYearInput");
+
+
+  // Reset the other input fields to their initial state
+    selectElement.addEventListener('change', function () {
+    const selectedOption = selectElement.value;
+
+    valiantYearInput.value = '';
+    sunYearInput.value = '';});
 
 
 
