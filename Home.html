@@ -119,21 +119,39 @@
   }
 
 //Calculate time
-  
-    const selectElement = document.getElementById("years");
-    const valiantYearInput = document.getElementById("valiantYearInput");
-    const sunYearInput = document.getElementById("sunYearInput");
-
-
-  // Reset the other input fields to their initial state
-    selectElement.addEventListener('change', function () {
-    const selectedOption = selectElement.value;
-
-    valiantYearInput.value = '';
-    sunYearInput.value = '';});
-
+const selectElement = document.getElementById("years");
+const valiantYearInput = document.getElementById("valiantYearInput");
+const sunYearInput = document.getElementById("sunYearInput");
 
 
 </script>
 </body>
 </html>
+
+
+<!-- const selectElement = document.getElementById("years");
+const valiantYearInput = document.getElementById("valiantYearInput");
+const sunYearInput = document.getElementById("sunYearInput");
+
+selectElement.addEventListener('change', function () {
+  const selectedOption = selectElement.value;
+
+if (selectedOption === 'Valiant Years') {
+  const valiantYearValue = parseFloat(valiantYearInput.value);
+  sunYearInput.value = (valiantYearValue / 144).toFixed(3);
+} else if (selectedOption === 'Sun Years') {
+  const sunYearValue = parseFloat(sunYearInput.value);
+  valiantYearInput.value = (sunYearValue * 10).toFixed(3);
+  }
+});
+
+
+
+sunYearInput.addEventListener ('input', function () {
+  const sunYearValue = parseFloat(sunYearInput.value);
+  valiantYearInput.value = (sunYearValue * 144).toFixed(3);
+});
+valiantYearInput.addEventListener ('input', function () {
+  const valiantYearValue = parseFloat(valiantYearInput.value);
+  sunYearInput.value = (valiantYearValue /144).toFixed(3);
+}) -->
