@@ -91,7 +91,7 @@
         <p>Death: ${character.death || 'N/A'}</p>
         <p>Realm: ${character.realm || 'N/A'}</p>
         <p>Hair: ${character.hair || 'N/A'}</p>
-        <a href="${character.wikiUrl || 'N/A'}">"Learn more"</a>
+        <a href="${character.wikiUrl || 'N/A'}" target="_blank">"Learn more"</a>
         </div>`);
       outputRace.innerHTML = characterInfo.join('');
     } else {
@@ -103,9 +103,12 @@
   }
 };
 
-  // Call the fetchDataForRace function when the page loads
-  window.addEventListener('load', fetchDataForRace);
-    
+// Call the fetchDataForRace function when the page loads
+window.addEventListener('load', fetchDataForRace);
+
+//SEARCH CHARACTER
+
+
 </script>
 
 </body>
