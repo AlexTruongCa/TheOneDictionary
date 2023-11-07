@@ -63,6 +63,7 @@ li a:hover{
 }
 .search-container{
   display: flex;
+  flex-direction: column;
   max-width: 800px;
   justify-content: center;
   align-items: center;
@@ -80,6 +81,15 @@ li a:hover{
   background: transparent;
   outline: none;
 }
+.search-results{
+  width: 100%;
+  background-color: white;
+  margin-top: 1rem;
+  border-radius: 10px;
+  overflow-y: scroll;
+  max-height: 100px;
+  }
+
 .search-button{
   cursor: pointer;
   background: transparent;

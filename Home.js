@@ -49,3 +49,32 @@ selectElement.addEventListener('change', function () {
   sunYearInput.value = '';
   console.log(selectedOption)
 }); //Inputs reset when option changed
+
+// SEARCH FUNCTIONALITY
+const searchInput = document.getElementById('searchInput')
+
+searchInput.addEventListener('input', e => {
+  const searchValue = e.target.value.toLowerCase()
+  console.log(searchValue)
+})
+
+const fetchName = async () => {
+  const API_ENDPOINT = `https://the-one-api.dev/v2/character?name`;
+
+  try {
+    const response = await fetch(API_ENDPOINT, {
+      method: 'GET',
+      headers: {
+        'Authorization': 'Bearer ymZ1I87HakbB-ZlOQInZ'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    
+  } catch (error) {
+    console.error('There was a problem with the fetch operation:', error);
+    document.getElementById('searchInput').innerHTML = 'Error fetching data.';
+  }
+};
