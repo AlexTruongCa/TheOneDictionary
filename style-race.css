@@ -120,9 +120,6 @@ li a:hover{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border: 5px solid blue;
-
-  
-
 }
 .character-card{
   border: 1px solid #ddd;
