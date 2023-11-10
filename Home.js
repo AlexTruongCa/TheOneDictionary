@@ -51,28 +51,62 @@ selectElement.addEventListener('change', function () {
 }); //Inputs reset when option changed
 
 // SEARCH FUNCTIONALITY
-document.addEventListener('DOMContentLoaded', function () {
-  const searchInput = document.getElementById('searchInput')
-  const searchResults = document.getElementById('searchResults')
+const searchInput = document.getElementById('searchInput')
+const searchResults = document.getElementById('searchResults')
+
+let characters = []
+
+fetch('https://the-one-api.dev/v2/character' , {
+  method: 'GET' ,
+  headers: {
+    'Authorization': 'Bearer ymZ1I87HakbB-ZlOQInZ'
+  }
+})
+  .then(res => res.json())
+  .then(data => {
+    characters = data.docs.map(character => {
+      const characterName = document.createElement('div')
+      characterName.textContent = character.name
+      characterName.classList.add('hide')
+      searchResults.appendChild(characterName)
+      return { name: character.name, element: characterName}
+    })
+  })
+  .catch(error => console.log(error))
+
+const updateDebounce = debounce((text) => {
+  console.log('Updating searchInput with text:', text);
+  searchInput.value = text
+}) 
+
+searchInput.addEventListener('input', (event) => {
+  const value = event.target.value.toLowerCase()
+  updateDebounce(event.target.value)
+  console.log('Input value', value)  
+  if (value === '') {
+    searchResults.style.display = 'none';
+  } else {
+    searchResults.style.display = 'block';
+  }
   
-  fetch('https://the-one-api.dev/v2/character' , {
-    method: 'GET' ,
-    headers: {
-      'Authorization': 'Bearer ymZ1I87HakbB-ZlOQInZ'
+  characters.forEach(character => {
+    if ( value === '') {
+      character.element.classList.add('hide')
+    } else if (character.name.toLowerCase().includes(value)){
+      character.element.classList.remove('hide')
+    } else {
+      character.element.classList.add('hide')
     }
   })
-    .then(res => res.json())
-    .then(data => {
-      data.docs.forEach(character => {
-        const characterName = document.createElement('div')
-        characterName.textContent = character.name
-        searchResults.appendChild(characterName)
-      })
-    })
-    .catch(error => console.log(error))
-  
-  searchInput.addEventListener('input', (e) => {
-    const value = e.target.value
-    console.log(value)
-  })
+  console.log(value)
 })
+
+function debounce (cb, delay = 1000) {
+  let timeout
+  return (...args) => {
+    clearTimeout (timeout)
+    timeout = setTimeout(() => {
+      cb(...args)
+    }, delay)
+  }
+}
