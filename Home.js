@@ -51,30 +51,28 @@ selectElement.addEventListener('change', function () {
 }); //Inputs reset when option changed
 
 // SEARCH FUNCTIONALITY
-const searchInput = document.getElementById('searchInput')
-
-searchInput.addEventListener('input', e => {
-  const searchValue = e.target.value.toLowerCase()
-  console.log(searchValue)
-})
-
-const fetchName = async () => {
-  const API_ENDPOINT = `https://the-one-api.dev/v2/character?name`;
-
-  try {
-    const response = await fetch(API_ENDPOINT, {
-      method: 'GET',
-      headers: {
-        'Authorization': 'Bearer ymZ1I87HakbB-ZlOQInZ'
-      }
-    });
-
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
+document.addEventListener('DOMContentLoaded', function () {
+  const searchInput = document.getElementById('searchInput')
+  const searchResults = document.getElementById('searchResults')
+  
+  fetch('https://the-one-api.dev/v2/character' , {
+    method: 'GET' ,
+    headers: {
+      'Authorization': 'Bearer ymZ1I87HakbB-ZlOQInZ'
     }
-    
-  } catch (error) {
-    console.error('There was a problem with the fetch operation:', error);
-    document.getElementById('searchInput').innerHTML = 'Error fetching data.';
-  }
-};
+  })
+    .then(res => res.json())
+    .then(data => {
+      data.docs.forEach(character => {
+        const characterName = document.createElement('div')
+        characterName.textContent = character.name
+        searchResults.appendChild(characterName)
+      })
+    })
+    .catch(error => console.log(error))
+  
+  searchInput.addEventListener('input', (e) => {
+    const value = e.target.value
+    console.log(value)
+  })
+})

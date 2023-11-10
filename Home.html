@@ -19,7 +19,7 @@
         <!-- <i class="fa fa-search"></i> -->
       </button>
       <input class="search-input" type="text" placeholder="Search" id="searchInput">
-      <div class="search-results"></div>
+      <div class="search-results" id="searchResults"></div>
     </div>
     <ul class="nav-links">
       <li><a href="#">Home</a></li> <!--<i class="fa fa-home"></i>-->
@@ -103,6 +103,44 @@
   </footer>
 
 
-<script src="Home.js"></script>
+<script>
+  const searchInput = document.getElementById('searchInput')
+  const searchResults = document.getElementById('searchResults')
+
+  let characters = []
+  
+  fetch('https://the-one-api.dev/v2/character' , {
+    method: 'GET' ,
+    headers: {
+      'Authorization': 'Bearer ymZ1I87HakbB-ZlOQInZ'
+    }
+  })
+    .then(res => res.json())
+    .then(data => {
+      characters = data.docs.map(character => {
+        const characterName = document.createElement('div')
+        characterName.textContent = character.name
+        characterName.classList.add('hide')
+        searchResults.appendChild(characterName)
+        return { name: character.name, element: characterName}
+      })
+    })
+    .catch(error => console.log(error))
+
+  searchInput.addEventListener('input', (event) => {
+    const value = event.target.value.toLowerCase()
+    characters.forEach(character => {
+      if ( value === '') {
+        character.element.classList.add('hide')
+      } else if (character.name.toLowerCase().includes(value)){
+        character.element.classList.remove('hide')
+      } else {
+        character.element.classList.add('hide')
+      }
+    })
+    console.log(value)
+  })
+
+</script>
 </body>
 </html>

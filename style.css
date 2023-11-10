@@ -97,6 +97,10 @@ li a:hover{
   border-radius: 5px;
   padding-left: 1rem;
 }
+
+.hide{
+  display: none;
+}
 /*Races section*/
 .race-container{
   background: linear-gradient(90deg, rgb(58, 57, 57), rgb(113, 129, 92));  
