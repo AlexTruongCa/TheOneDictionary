@@ -67,11 +67,15 @@ fetch('https://the-one-api.dev/v2/character' , {
     characters = data.docs.map(character => {
       const characterName = document.createElement('div')
       const characterLink = document.createElement('a')
-      
-      characterName.textContent = character.name
+      characterLink.textContent = character.name
       characterLink.href = character.wikiUrl
+      characterLink.target = "_blank"
+      characterName.textContent = character.name
 
       characterName.classList.add('hide')
+
+      characterName.appendChild(characterLink)
+
       searchResults.appendChild(characterName)
       return { name: character.name, element: characterName, link: characterLink}
     })
@@ -104,6 +108,7 @@ searchInput.addEventListener('input', (event) => {
   })
   console.log(value)
 })
+
 
 function debounce (cb, delay = 1000) {
   let timeout
