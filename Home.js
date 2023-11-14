@@ -66,10 +66,14 @@ fetch('https://the-one-api.dev/v2/character' , {
   .then(data => {
     characters = data.docs.map(character => {
       const characterName = document.createElement('div')
+      const characterLink = document.createElement('a')
+      
       characterName.textContent = character.name
+      characterLink.href = character.wikiUrl
+
       characterName.classList.add('hide')
       searchResults.appendChild(characterName)
-      return { name: character.name, element: characterName}
+      return { name: character.name, element: characterName, link: characterLink}
     })
   })
   .catch(error => console.log(error))

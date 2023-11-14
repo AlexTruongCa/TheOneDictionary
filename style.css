@@ -89,7 +89,12 @@ li a:hover{
   border-radius: 10px;
   overflow-y: scroll;
   max-height: 100px;
+  transition: all 0.5s ease;
   }
+
+.search-results:hover{
+  cursor: pointer;
+}
 
 .search-button{
   cursor: pointer;
