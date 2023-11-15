@@ -56,7 +56,6 @@
     console.log(characters)
   }) 
 
-
     if (characterData.length > 0) {
       characters = characterData.map(character =>{
         const card = characterCardTemplate.content.cloneNode(true).children[0]

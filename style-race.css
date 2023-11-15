@@ -158,15 +158,16 @@ li a:hover{
   font-style: italic;
   color: blue;
   transition: all 0.5s ease;
-}
+} */
 
-.card > .url:hover{
+/* .card > .url:hover{
   color: rgb(207, 206, 125);
 } */
 
 .learn-more-link{
   font-style: italic;
-  color: blue;
+  font-size: 1.25rem;
+  color: rgb(124, 123, 123);
   transition: all 0.5s ease;
 }
 
@@ -187,6 +188,25 @@ footer{
   font-size: 1.5rem;
   
 }
+
+/* PAGE LOADING */
+/* .loader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(113, 129, 92);
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader-hidden{
+  opacity: 0;
+  visibility: hidden;
+} */
 
 /* SEARCH FILTER */
 
