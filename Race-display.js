@@ -34,7 +34,7 @@
 
   const data = await response.json();
   const characterData = data.docs;
-  console.log(data);
+  // console.log(data);
 
   // Display the fetched data in the outputRace div
 
@@ -42,11 +42,25 @@
   // const outputRace = document.getElementById('outputRace');
   const characterCardTemplate = document.getElementById('data-user-template')
   const characterCardContainer = document.getElementById('character-cards-container')
+  const searchInput = document.getElementById('data-search')
+
+  let characters = []
+  
+  searchInput.addEventListener("input", event => {
+    const value = event.target.value.toLowerCase()
+    characters.forEach(character => {
+      const isVisible = character.name.toLowerCase().includes(value)
+      character.element.classList.toggle("hide" , !isVisible)
+    })
+    console.log(value)
+    console.log(characters)
+  }) 
+
 
     if (characterData.length > 0) {
-      characterData.forEach(character =>{
+      characters = characterData.map(character =>{
         const card = characterCardTemplate.content.cloneNode(true).children[0]
-        console.log(character)
+        // console.log(character)
         const nameCharacter = card.querySelector("[data-name]") 
         const nameHeight = card.querySelector("[data-height]")
         const nameBirth = card.querySelector("[data-birth]")
@@ -62,6 +76,7 @@
         nameHair.textContent = `Hair: ${character.hair || 'N/A'}`
         nameURL.innerHTML = `<a class="learn-more-link" href="${character.wikiUrl || 'N/A'}" target="_blank">Learn more</a>`
         characterCardContainer.append(card)
+        return {name: character.name, height: character.height, birth: character.birth, death: character.death, realm: character.realm, hair: character.hair, wikiUrl: character.wikiUrl, element: card}
       })
     
       // const characterInfo = characterData.map(character => 
