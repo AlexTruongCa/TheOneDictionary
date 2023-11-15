@@ -151,6 +151,11 @@ p{
 }
 /*put class on the p and put height of 2rem to solve the hover problem*/
 
+.character-name-example:hover{
+  background-color: aqua;
+}
+
+
 .image-1{
   overflow:hidden;
 }

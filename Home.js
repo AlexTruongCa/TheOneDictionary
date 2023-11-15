@@ -66,14 +66,18 @@ fetch('https://the-one-api.dev/v2/character' , {
   .then(data => {
     characters = data.docs.map(character => {
       const characterName = document.createElement('div')
-      characterName.style.backgroundColor = 'lightgrey'
+      // characterName.style.backgroundColor = 'lightgrey'
       characterName.style.width = '300px'
       characterName.style.fontSize = '1rem'
+      // characterName.setAttribute("class" , "character-name-example")
       const characterLink = document.createElement('a')
       characterLink.textContent = character.name
       characterLink.href = character.wikiUrl
+      characterLink.style.color = "black"
       characterLink.target = "_blank"
-      characterName.textContent = character.name
+      
+      
+      // characterName.textContent = character.name
       characterName.classList.add('hide')
 
 
