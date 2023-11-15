@@ -116,11 +116,13 @@ li a:hover{
 }
 
 /*CHARACTER CARD*/
-.card-container{
+
+/* .card-container{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border: 5px solid blue;
 }
+
 .character-card{
   border: 1px solid #ddd;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -135,9 +137,42 @@ li a:hover{
 }
 .character-card a:hover{
   color: rgb(207, 206, 125);
+} */
+
+.character-cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: .25rem;
+  margin-top: 1rem;
 }
 
+.card{
+  border: 1px solid black;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  padding: .5rem;
+  font-size: 1.5rem;
+}
 
+/* .card > .url{
+  font-style: italic;
+  color: blue;
+  transition: all 0.5s ease;
+}
+
+.card > .url:hover{
+  color: rgb(207, 206, 125);
+} */
+
+.learn-more-link{
+  font-style: italic;
+  color: blue;
+  transition: all 0.5s ease;
+}
+
+.learn-more-link:hover{
+  color: rgb(207, 206, 125);
+}
 
 /*FOOTER*/
 footer{
@@ -148,6 +183,9 @@ footer{
   font-size: 1.5rem;
   
 }
+
+/* SEARCH FILTER */
+
 
 /*RESPONSIVE DESIGN*/
 

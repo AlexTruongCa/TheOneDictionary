@@ -37,25 +37,50 @@
   console.log(data);
 
   // Display the fetched data in the outputRace div
-  const outputRace = document.getElementById('outputRace');
+
+  
+  // const outputRace = document.getElementById('outputRace');
+  const characterCardTemplate = document.getElementById('data-user-template')
+  const characterCardContainer = document.getElementById('character-cards-container')
+
     if (characterData.length > 0) {
-      const characterInfo = characterData.map(character => 
-      `<div class="character-card">
-        <p>Name: ${character.name !=='' ? character.name : 'N/A'}</p>
-        <p>Height: ${character.height || 'N/A'}</p>
-        <p>Birth: ${character.birth || 'N/A'}</p>
-        <p>Death: ${character.death || 'N/A'}</p>
-        <p>Realm: ${character.realm || 'N/A'}</p>
-        <p>Hair: ${character.hair || 'N/A'}</p>
-        <a href="${character.wikiUrl || 'N/A'}" target="_blank">"Learn more"</a>
-        </div>`);
-      outputRace.innerHTML = characterInfo.join('');
+      characterData.forEach(character =>{
+        const card = characterCardTemplate.content.cloneNode(true).children[0]
+        console.log(character)
+        const nameCharacter = card.querySelector("[data-name]") 
+        const nameHeight = card.querySelector("[data-height]")
+        const nameBirth = card.querySelector("[data-birth]")
+        const nameDeath = card.querySelector("[data-death]")
+        const nameRealm = card.querySelector("[data-realm]")
+        const nameHair = card.querySelector("[data-hair]")
+        const nameURL = card.querySelector("[data-url]")
+        nameCharacter.textContent = `Name: ${character.name || 'N/A'}`
+        nameHeight.textContent = `Height: ${character.height || 'N/A'}`
+        nameBirth.textContent = `Birth: ${character.birth || 'N/A'}`
+        nameDeath.textContent = `Death: ${character.death || 'N/A'}`
+        nameRealm.textContent = `Realm: ${character.realm || 'N/A'}`
+        nameHair.textContent = `Hair: ${character.hair || 'N/A'}`
+        nameURL.innerHTML = `<a class="learn-more-link" href="${character.wikiUrl || 'N/A'}" target="_blank">Learn more</a>`
+        characterCardContainer.append(card)
+      })
+    
+      // const characterInfo = characterData.map(character => 
+      // `<div class="character-card">
+      //   <p>Name: ${character.name !=='' ? character.name : 'N/A'}</p>
+      //   <p>Height: ${character.height || 'N/A'}</p>
+      //   <p>Birth: ${character.birth || 'N/A'}</p>
+      //   <p>Death: ${character.death || 'N/A'}</p>
+      //   <p>Realm: ${character.realm || 'N/A'}</p>
+      //   <p>Hair: ${character.hair || 'N/A'}</p>
+      //   <a href="${character.wikiUrl || 'N/A'}" target="_blank">"Learn more"</a>
+      //   </div>`);
+      // outputRace.innerHTML = characterInfo.join('');
     } else {
-      outputRace.innerHTML = 'No characters found for this race';
+      characterCardContainer.innerHTML = 'No characters found for this race';
     }
   } catch (error) {
     console.error('There was a problem with the fetch operation:', error);
-    document.getElementById('outputRace').innerHTML = 'Error fetching data.';
+    document.getElementById('character-cards-container').innerHTML = 'Error fetching data.';
   }
 };
 
