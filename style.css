@@ -90,7 +90,7 @@ li a:hover{
   position: fixed;
   top: 54px;
   /* width: 100%; */
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   margin-top: 1rem;
   border-radius: 10px;
   overflow-y: scroll;
@@ -98,12 +98,10 @@ li a:hover{
   transition: all 0.5s ease;
   }
 
-.search-results.div.a:hover{
+/* .search-results.div.a:hover{
   cursor: pointer;
   color: red;
-}
-
-
+} */
 
 .search-button{
   cursor: pointer;
@@ -157,7 +155,7 @@ p{
 /*put class on the p and put height of 2rem to solve the hover problem*/
 
 .character-name-example:hover{
-  background-color: aqua;
+  background-color: rgb(250, 250, 250);
 }
 
 
@@ -393,4 +391,17 @@ p{
   .input-description{
     padding: 0 10%;
   }
+  .search-results{
+    display: none;
+    position: fixed;
+    top: 12px;
+    /* width: 100%; */
+    background-color: rgba(255, 255, 255, 0.9);
+
+    margin-top: 1rem;
+    border-radius: 10px;
+    overflow-y: scroll;
+    max-height: 100px;
+    transition: all 0.5s ease;
+    }
 }

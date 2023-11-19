@@ -90,7 +90,7 @@ fetch('https://the-one-api.dev/v2/character' , {
       characterName.style.width = '300px'
       characterName.style.fontSize = '1rem'
       characterName.style.paddingLeft = '1rem'
-      // characterName.setAttribute("class" , "character-name-example")
+      characterName.setAttribute("class" , "character-name-example")
       const characterLink = document.createElement('a')
       characterLink.textContent = character.name
       characterLink.href = character.wikiUrl
@@ -137,6 +137,17 @@ searchInput.addEventListener('input', (event) => {
   console.log(value)
 })
 
+//REMOVE search input when click outside the searchbar
+document.addEventListener('click' , (event) => {
+  const clickedElement = event.target
+
+  const isClickedInsideSearchInput = searchResults.contains(clickedElement) || searchInput.contains(clickedElement)
+
+  if (!isClickedInsideSearchInput) {
+    searchResults.style.display = 'none'
+    searchInput.value = ''
+  }
+})
 
 function debounce (cb, delay = 1000) {
   let timeout

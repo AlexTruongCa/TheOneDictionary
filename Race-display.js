@@ -46,7 +46,7 @@
 
   let characters = []
   
-  searchInput.addEventListener("input", event => {
+  searchInput.addEventListener('input', (event) => {
     const value = event.target.value.toLowerCase()
     characters.forEach(character => {
       const isVisible = character.name.toLowerCase().includes(value)
@@ -97,6 +97,7 @@
     document.getElementById('character-cards-container').innerHTML = 'Error fetching data.';
   }
 };
+
 
 // Call the fetchDataForRace function when the page loads
 window.addEventListener('load', fetchDataForRace);
