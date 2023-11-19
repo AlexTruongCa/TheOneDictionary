@@ -18,7 +18,8 @@ body{
 h1{
   font-size: 2.5rem;
   color: aliceblue;
-  padding: 5rem 0;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
   text-align: center;
 }
 .nav-links{
@@ -43,13 +44,14 @@ h4 span{
 
 nav{
  display: flex;
- /* position: fixed;
- flex-shrink: 0; */
+ width: 100%;
+ position: fixed;
  justify-content: space-between;
  align-items: center;
  padding: 30px 2.5rem;
  background-color: rgb(58, 57, 57);
  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+ z-index: 1;
 }
 
 li{
@@ -101,6 +103,8 @@ li a:hover{
   color: red;
 }
 
+
+
 .search-button{
   cursor: pointer;
   background: transparent;
@@ -115,6 +119,7 @@ li a:hover{
 /*Races section*/
 .race-container{
   background: linear-gradient(90deg, rgb(58, 57, 57), rgb(113, 129, 92));  
+  padding-top: 110px;
 }
 .container{
   margin: auto;
