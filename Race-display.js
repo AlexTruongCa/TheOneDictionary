@@ -1,4 +1,4 @@
-  //Nav Bar
+//Nav Bar
   const toggleBtn = document.querySelector('.toggle-btn')
   const toggleBtnIcon = document.querySelector('.toggle-btn i')
   const dropDownMenu = document.querySelector('.dropdown')
@@ -12,11 +12,11 @@
     : 'fa-solid fa-bars'
   }
 
-  // Extract the 'race' query parameter from the URL
+// Extract the 'race' query parameter from the URL
   const urlParams = new URLSearchParams(window.location.search);
   const race = urlParams.get('race');
 
-  // Function to fetch and display data for the specified race
+// Function to fetch and display data for the specified race
   const fetchDataForRace = async () => {
   const API_ENDPOINT = `https://the-one-api.dev/v2/character?race=${race}`;
 
@@ -34,12 +34,14 @@
 
   const data = await response.json();
   const characterData = data.docs;
-  // console.log(data);
+// console.log(data);
 
-  // Display the fetched data in the outputRace div
+ 
+
+// Display the fetched data in the outputRace div
 
   
-  // const outputRace = document.getElementById('outputRace');
+// const outputRace = document.getElementById('outputRace');
   const characterCardTemplate = document.getElementById('data-user-template')
   const characterCardContainer = document.getElementById('character-cards-container')
   const searchInput = document.getElementById('data-search')
@@ -56,6 +58,8 @@
     console.log(characters)
   }) 
 
+// Delayed display of fetched data after 3 seconds
+  setTimeout(() => {
     if (characterData.length > 0) {
       characters = characterData.map(character =>{
         const card = characterCardTemplate.content.cloneNode(true).children[0]
@@ -92,6 +96,8 @@
     } else {
       characterCardContainer.innerHTML = 'No characters found for this race';
     }
+  } , 3000) //delay of 3 seconds before displaying data
+    
   } catch (error) {
     console.error('There was a problem with the fetch operation:', error);
     document.getElementById('character-cards-container').innerHTML = 'Error fetching data.';
@@ -99,8 +105,41 @@
 };
 
 
+
 // Call the fetchDataForRace function when the page loads
-window.addEventListener('load', fetchDataForRace);
+
+// Try 1
+// window.addEventListener('load', fetchDataForRace);
+
+//Try 2
+// window.addEventListener('load', () => {
+//   const imageLoader = document.getElementById('image-loader')
+
+//   if (!fetchDataForRace) {
+//     imageLoader.style.display = 'block'
+//   } else (fetchDataForRace)
+// });
+
+window.addEventListener('load' , async () => {
+  const imageLoader = document.getElementById('image-loader')
+
+  //Show the loader initally
+  imageLoader.style.display = 'block'
+
+  try {
+    //Fetch data
+    await fetchDataForRace()
+
+    //Hide loader after fechting data
+    imageLoader.style.display = 'none'
+  } catch (error) {
+    console.log('There was an error fetching data' , error)
+    
+    //Hide loader in case of error
+    imageLoader.style.display = 'none'
+  }
+})
+
 
 //SEARCH CHARACTER
 
