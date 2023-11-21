@@ -115,6 +115,36 @@ li a:hover{
   transition: all 0.5s ease;
 }
 
+/* PAGE LOADER */
+
+.image-loader-container{
+  display: none;
+  overflow: hidden;
+  background: linear-gradient(90deg, rgb(58, 57, 57), rgb(113, 129, 92));  
+  margin-bottom: 0;
+  padding-top: 1rem;
+  padding-bottom: 0;
+}
+.image-loader{
+  position: relative;
+  /* margin-top: 30px; */
+  width: 30%;
+  left: 36%;
+  top: 50%;
+  transform: translate(-50%);
+  animation: rotateImage 180s linear infinite;
+
+}
+
+@keyframes rotateImage {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /*CHARACTER CARD*/
 
 /* .card-container{
@@ -143,7 +173,10 @@ li a:hover{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: .25rem;
-  margin: 1rem;
+  padding: 1rem;
+  background: linear-gradient(90deg, rgb(58, 57, 57), rgb(113, 129, 92));  
+
+  
 }
 
 .card{
@@ -208,12 +241,7 @@ footer{
 } */
 
 
-.image-loader{
-  position: relative;
-  width: 30%;
-  left: 50%;
-  transform: translate(-50%);
-}
+
 
 
 /* SEARCH FILTER */
@@ -274,11 +302,11 @@ p{
   cursor: pointer;
   font-size: 2.5rem;
 }
-.image-races{
+/* .image-races{
   width: 50%;
   height: 50%;
   animation: rotateImage 180s linear infinite;
-}
+} */
 .calculation{
  flex-direction: column;
 }
