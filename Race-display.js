@@ -105,6 +105,7 @@
 };
 
 // Display Race Photo
+
 const photoAinur = document.getElementById ('photo-ainur')
 const photoMaiar = document.getElementById ('photo-maiar')
 const photoElves = document.getElementById ('photo-elves')
@@ -113,9 +114,9 @@ const photoMen = document.getElementById ('photo-men')
 const photoHobbit = document.getElementById ('photo-hobbits')
 const photoOrcs = document.getElementById ('photo-orcs')
 
-const elvesRaces = ['Elves']
-const dwarvesRaces = ['Dwarf']
-const menRaces = ['Human']
+const elvesRaces = ['Elves' , 'Elf']
+const dwarvesRaces = ['Dwarves' , 'Dwarf']
+const menRaces = ['Human' , 'Men']
 const ainurRaces = ['Ainur']
 const maiarRaces = ['Maiar']
 const hobbitRaces = ['Hobbit']
@@ -186,9 +187,11 @@ for (const raceSet of allRaces) {
 
 window.addEventListener('load' , async () => {
   const imageLoader = document.getElementById('image-loader')
-
+  const allPhotos = document.getElementById('allPhotos')
+  
   //Show the loader initally
   imageLoader.style.display = 'block'
+  // allPhotos.style.display = 'none'
 
   try {
     //Fetch data
@@ -196,6 +199,7 @@ window.addEventListener('load' , async () => {
 
     //Hide loader after fechting data
     imageLoader.style.display = 'none'
+    // allPhotos.style.display = 'block'
   } catch (error) {
     console.log('There was an error fetching data' , error)
     
