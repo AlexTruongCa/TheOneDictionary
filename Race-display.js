@@ -104,7 +104,71 @@
   }
 };
 
+// Display Race Photo
+const photoAinur = document.getElementById ('photo-ainur')
+const photoMaiar = document.getElementById ('photo-maiar')
+const photoElves = document.getElementById ('photo-elves')
+const photoDwarves = document.getElementById ('photo-dwarves')
+const photoMen = document.getElementById ('photo-men')
+const photoHobbit = document.getElementById ('photo-hobbits')
+const photoOrcs = document.getElementById ('photo-orcs')
 
+const elvesRaces = ['Elves']
+const dwarvesRaces = ['Dwarf']
+const menRaces = ['Human']
+const ainurRaces = ['Ainur']
+const maiarRaces = ['Maiar']
+const hobbitRaces = ['Hobbit']
+const orcsRaces = ['Orc']
+
+const allRaces = [
+  {name: elvesRaces, photoElement: photoElves},
+  {name: dwarvesRaces, photoElement: photoDwarves},
+  {name: menRaces, photoElement: photoMen},
+  {name: ainurRaces, photoElement: photoAinur},
+  {name: maiarRaces, photoElement: photoMaiar},
+  {name: hobbitRaces, photoElement: photoHobbit},
+  {name: orcsRaces, photoElement: photoHobbit}
+]
+
+let matchedPhoto = photoOrcs
+
+for (const raceSet of allRaces) {
+  if (raceSet.name.includes(race)) {
+    raceSet.photoElement.style.display = 'block'
+    matchedPhoto = raceSet.photoElement
+    break
+  }
+}
+
+// const photoAinur = document.getElementById ('photo-ainur')
+// const photoMaiar = document.getElementById ('photo-maiar')
+// const photoElves = document.getElementById ('photo-elves')
+// const photoDwarves = document.getElementById ('photo-dwarves')
+// const photoMen = document.getElementById ('photo-men')
+// const photoHobbit = document.getElementById ('photo-hobbits')
+// const photoOrcs = document.getElementById ('photo-orcs')
+
+// const elvesRaces = ['Elves' , 'Elf']
+// const dwarvesRaces = ['Dwarf' , 'Dwarves']
+// const menRaces = ['Human' , 'Men']
+
+
+// if (race === 'Ainur') {
+//   photoAinur.style.display = 'block'
+// } else if (race === 'Maiar') {
+//   photoMaiar.style.display = 'block'
+// } else if (elvesRaces.includes(race)) {
+//   photoElves.style.display = 'block'
+// } else if (dwarvesRaces.includes(race)) {
+//   photoDwarves.style.display = 'block'
+// } else if (menRaces.includes(race)) {
+//   photoMen.style.display = 'block'
+// } else if (race === 'Hobbit') {
+//   photoHobbit.style.display = 'block'
+// } else {
+//   photoOrcs.style.display = 'block'
+// }
 
 // Call the fetchDataForRace function when the page loads
 

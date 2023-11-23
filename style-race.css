@@ -241,6 +241,26 @@ footer{
 } */
 
 
+/* Photo race */
+
+.photo-races-containter {
+  border: none solid red;
+  display: grid;
+  margin-top: -16px;
+  place-items: center; /*Aligns the content both horizontally and vertically */
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(90deg, rgb(58, 57, 57), rgb(113, 129, 92));  
+
+}
+
+.photo-races {
+  display: none;
+  width: 100%;
+  object-fit: contain;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+  /* opacity: 0.8; */
+}
 
 
 
