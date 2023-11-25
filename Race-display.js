@@ -187,11 +187,17 @@ if (race === 'Ainur') {
 
 window.addEventListener('load' , async () => {
   const imageLoader = document.getElementById('image-loader')
-  const allPhotos = document.getElementById('allPhotos')
+  const allPhotos = document.querySelectorAll('.photo-races')
   
   //Show the loader initally
   imageLoader.style.display = 'block'
+  // allPhotos.style.opacity = '0.5'
   // allPhotos.style.display = 'none'
+  allPhotos.forEach(photo => {
+    photo.style.opacity = '0.7'
+    photo.style.background = 'grey'
+    // photo.style.display = 'block'
+  })
 
   try {
     //Fetch data
@@ -200,6 +206,11 @@ window.addEventListener('load' , async () => {
     //Hide loader after fechting data
     imageLoader.style.display = 'none'
     // allPhotos.style.display = 'block'
+    allPhotos.forEach(photo => {
+      photo.style.opacity = '1'
+      // photo.style.display = 'block'
+    })  
+    
   } catch (error) {
     console.log('There was an error fetching data' , error)
     
