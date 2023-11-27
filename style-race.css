@@ -148,6 +148,34 @@ li a:hover{
   }
 }
 
+
+.race-description-container {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 36%;
+  top: 38%;
+}
+
+.valar-description {
+  border: 1px solid red;
+  padding: 15px;
+  width: 500px;
+}
+
+.valar-description p {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.valar-description h5 {
+  text-align: center;
+  font-size: 2rem;
+}
+
 /*CHARACTER CARD*/
 
 /* .card-container{
@@ -178,8 +206,6 @@ li a:hover{
   gap: .25rem;
   padding: 1rem;
   background: linear-gradient(90deg, rgb(58, 57, 57), rgb(113, 129, 92));  
-
-  
 }
 
 .card{
@@ -188,6 +214,7 @@ li a:hover{
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   padding: .5rem;
   font-size: 1.5rem;
+
 }
 
 /* .card > .url{
