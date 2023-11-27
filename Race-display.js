@@ -59,7 +59,7 @@
   }) 
 
 // Delayed display of fetched data after 3 seconds
-  setTimeout(() => {
+  // setTimeout(() => {
     if (characterData.length > 0) {
       characters = characterData.map(character =>{
         const card = characterCardTemplate.content.cloneNode(true).children[0]
@@ -96,7 +96,7 @@
     } else {
       characterCardContainer.innerHTML = 'No characters found for this race';
     }
-  } , 500) //delay of .5 seconds before displaying data
+  // } , 3000) //delay of 3 seconds before displaying data
     
   } catch (error) {
     console.error('There was a problem with the fetch operation:', error);
