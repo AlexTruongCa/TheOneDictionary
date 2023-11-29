@@ -230,7 +230,11 @@ li a:hover{
 .card:nth-child(1),
 .card:nth-child(2),
 .card:nth-child(3),
-.card:nth-child(4){
+.card:nth-child(4),
+.card:nth-child(5),
+.card:nth-child(6),
+.card:nth-child(7),
+.card:nth-child(8){
  display: block;
 }
 .name-realm{
@@ -271,11 +275,25 @@ li a:hover{
   display: none;
 }
 
+.button-containter{
+  position: relative;
+
+}
+.load-button{
+  background: linear-gradient(90deg, rgb(58, 57, 57), rgb(113, 129, 92));  
+  position: absolute;
+  top: 30%;
+  left: 49%;
+  transform: translate(-30%, -50%);
+}
+
 #load-more{
-  display: flex;
-  background-color: aqua;
-  justify-content: center;
+  display: block;
   padding: 9px;
+}
+
+#load-more:hover{
+  cursor: pointer;
 }
 
 /*FOOTER*/

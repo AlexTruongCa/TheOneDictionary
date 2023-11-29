@@ -235,11 +235,20 @@ window.addEventListener('load' , async () => {
 })
 
 let loadMoreBtn = document.querySelector('#load-more')
-let currentCard = 4
+let currentCard = 8
 
 loadMoreBtn.onclick = () => {
-  let boxes = [...document.querySelectorAll'.character-cards']
+  let boxes = [...document.querySelectorAll('.card')]
+  for (let i = currentCard; i < currentCard +8 ; i++ ) {
+    boxes[i].style.display = 'block'
+  }
+  currentCard += 8
+  
+  if (currentCard >= boxes.length) {
+    loadMoreBtn.style.display = 'none'
+  }
 }
+
 
 //SEARCH CHARACTER
 
