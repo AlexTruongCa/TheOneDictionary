@@ -234,6 +234,12 @@ window.addEventListener('load' , async () => {
   }
 })
 
+let loadMoreBtn = document.querySelector('#load-more')
+let currentCard = 4
+
+loadMoreBtn.onclick = () => {
+  let boxes = [...document.querySelectorAll'.character-cards']
+}
 
 //SEARCH CHARACTER
 

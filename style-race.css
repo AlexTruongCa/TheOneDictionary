@@ -223,8 +223,16 @@ li a:hover{
   font-size: 1.1rem;
   line-height: 2;
   border-radius: 10px;
+  display: none; /*for load more function*/
 }
 
+/* Display initial cards before Load More */
+.card:nth-child(1),
+.card:nth-child(2),
+.card:nth-child(3),
+.card:nth-child(4){
+ display: block;
+}
 .name-realm{
   display: flex;
   justify-content: center;
@@ -243,7 +251,7 @@ li a:hover{
   font-size: 1rem;
   color: rgb(124, 123, 123);
   transition: all 0.5s ease;
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(255, 255, 255);
   border: .15px solid rgb(85, 85, 85);
   border-radius: 20px;
   padding-left: 8px;
@@ -254,12 +262,20 @@ li a:hover{
 }
 
 .learn-more-link:hover{
-  color: rgb(207, 206, 125);
-  background-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  background-color: rgb(233, 196, 118);
+  max-width: 135px;
 }
 
 .hide{
   display: none;
+}
+
+#load-more{
+  display: flex;
+  background-color: aqua;
+  justify-content: center;
+  padding: 9px;
 }
 
 /*FOOTER*/
