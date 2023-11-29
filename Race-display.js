@@ -71,12 +71,12 @@
         const nameRealm = card.querySelector("[data-realm]")
         const nameHair = card.querySelector("[data-hair]")
         const nameURL = card.querySelector("[data-url]")
-        nameCharacter.textContent = `Name: ${character.name || 'N/A'}`
-        nameHeight.textContent = `Height: ${character.height || 'N/A'}`
-        nameBirth.textContent = `Birth: ${character.birth || 'N/A'}`
-        nameDeath.textContent = `Death: ${character.death || 'N/A'}`
-        nameRealm.textContent = `Realm: ${character.realm || 'N/A'}`
-        nameHair.textContent = `Hair: ${character.hair || 'N/A'}`
+        nameCharacter.textContent = `${character.name || 'N/A'}`
+        nameHeight.textContent = `Height: ${character.height || 'Unknown'}`
+        nameBirth.textContent = `Birth: ${character.birth || 'Unknown'}`
+        nameDeath.textContent = `Death: ${character.death || 'Unknown'}`
+        nameRealm.textContent = `of ${character.realm || 'Unknown'}`
+        nameHair.textContent = `Hair: ${character.hair || 'Unknown'}`
         nameURL.innerHTML = `<a class="learn-more-link" href="${character.wikiUrl || 'N/A'}" target="_blank">Learn more</a>`
         characterCardContainer.append(card)
         return {name: character.name, height: character.height, birth: character.birth, death: character.death, realm: character.realm, hair: character.hair, wikiUrl: character.wikiUrl, element: card}

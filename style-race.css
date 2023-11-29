@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Bilbo', cursive;
+  font-family: 'Figtree', sans-serif;
   word-spacing: 5px;
 }
 
@@ -208,13 +208,19 @@ li a:hover{
   background: linear-gradient(90deg, rgb(58, 57, 57), rgb(113, 129, 92));  
 }
 
+
 .card{
   border: 1px solid black;
   background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   padding: .5rem;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 2;
+}
 
+.card .name,
+.card .realm {
+  font-weight: 900;
 }
 
 /* .card > .url{
@@ -229,18 +235,30 @@ li a:hover{
 
 .learn-more-link{
   font-style: italic;
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: rgb(124, 123, 123);
   transition: all 0.5s ease;
+  background-color: rgb(238, 238, 238);
+  border: .15px solid rgb(85, 85, 85);
+  border-radius: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+
+  
 }
 
 .learn-more-link:hover{
   color: rgb(207, 206, 125);
+  background-color: rgb(255, 255, 255);
+
 }
 
 .hide{
   display: none;
 }
+
+
+
 
 /*FOOTER*/
 footer{
