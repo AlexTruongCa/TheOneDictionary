@@ -150,30 +150,36 @@ li a:hover{
 
 
 .race-description-container {
-  background-color: aqua;
+  background-color: rgba(255, 255, 255, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
   left: 36%;
-  top: 38%;
+  top: 35%;
+  border-radius: 10px;
 }
 
-.valar-description {
-  border: 1px solid red;
+.race-description {
+  /* border: 1px solid red; */
   padding: 15px;
   width: 500px;
 }
 
-.valar-description p {
+.race-description p {
   text-align: center;
   font-size: 1.5rem;
 }
 
-.valar-description h5 {
+.race-description h5 {
   text-align: center;
   font-size: 2rem;
+  font-weight: 600;
+}
+
+.race-narrative{
+  display: none;
 }
 
 /*CHARACTER CARD*/
@@ -216,24 +222,23 @@ li a:hover{
   padding: .5rem;
   font-size: 1.1rem;
   line-height: 2;
+  border-radius: 10px;
+}
+
+.name-realm{
+  display: flex;
+  justify-content: center;
 }
 
 .card .name,
 .card .realm {
-  font-weight: 900;
+  font-weight: 600;
+  margin: 5px;
 }
 
-/* .card > .url{
-  font-style: italic;
-  color: blue;
-  transition: all 0.5s ease;
-} */
-
-/* .card > .url:hover{
-  color: rgb(207, 206, 125);
-} */
-
 .learn-more-link{
+  display: flex;
+  max-width: 120px;
   font-style: italic;
   font-size: 1rem;
   color: rgb(124, 123, 123);
@@ -243,22 +248,19 @@ li a:hover{
   border-radius: 20px;
   padding-left: 8px;
   padding-right: 8px;
-
+  justify-content: center;
+  margin: auto;
   
 }
 
 .learn-more-link:hover{
   color: rgb(207, 206, 125);
   background-color: rgb(255, 255, 255);
-
 }
 
 .hide{
   display: none;
 }
-
-
-
 
 /*FOOTER*/
 footer{

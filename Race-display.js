@@ -154,21 +154,35 @@ const photoOrcs = document.getElementById ('photo-orcs')
 // const dwarvesRaces = ['Dwarf' , 'Dwarves']
 // const menRaces = ['Human' , 'Men']
 
+const narAinur = document.getElementById ('valar-description')
+const narMaiar = document.getElementById ('maiar-description')
+const narElf = document.getElementById ('elf-description')
+const narDwarf = document.getElementById ('dwarf-description')
+const narMen = document.getElementById ('men-description')
+const narHobbit = document.getElementById ('hobbit-description')
+const narOrc = document.getElementById ('orc-description')
 
 if (race === 'Ainur') {
   photoAinur.style.display = 'block'
+  narAinur.style.display = 'block'
 } else if (race === 'Maiar') {
   photoMaiar.style.display = 'block'
+  narMaiar.style.display = 'block'
 } else if (race.includes('Elf') || race.includes('Elves')) {
   photoElves.style.display = 'block'
+  narElf.style.display = 'block'
 } else if (race.includes('Dwarves') || race.includes('Dwarf')) {
   photoDwarves.style.display = 'block'
+  narDwarf.style.display = 'block'
 } else if (race.includes('Men') || race.includes('Human')) {
   photoMen.style.display = 'block'
+  narMen.style.display = 'block'
 } else if (race === 'Hobbit') {
   photoHobbit.style.display = 'block'
+  narHobbit.style.display = 'block'
 } else {
   photoOrcs.style.display = 'block'
+  narOrc.style.display = 'block'
 }
 
 // Call the fetchDataForRace function when the page loads

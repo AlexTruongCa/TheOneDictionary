@@ -7,13 +7,13 @@
   <link rel="stylesheet" href="style-race.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
   <nav>
-    <h4>The<span>One</span>Dictionary</h4>
+    <a href="Home.html"><h4>The<span>One</span>Dictionary</h4></a>
     <div class="search-container">
       <button type="submit" class="search-button">
         <i class="fa fa-search"></i>
@@ -36,9 +36,35 @@
   </nav>
 
   <div class="race-description-container">
-    <div class="valar-description">
-      <h5> - Valar - </h5>
-      <p>The Valar are the powerful Ainur who shaped the world of Arda, each overseeing aspects of its creation and governance, embodying immense might and wisdom in J.R.R. Tolkien's legendarium.</p>
+    <div class="race-description">
+      <div class="race-narrative" id="valar-description">
+        <h5> - Valar - </h5>
+        <p>The Valar are the powerful Ainur who shaped the world of Arda, each overseeing aspects of its creation and governance, embodying immense might and wisdom in J.R.R. Tolkien's legendarium.</p>
+      </div>
+      <div class="race-narrative"  id="maiar-description">
+        <h5> - Maiar - </h5>
+        <p>In Tolkien's world, the Maiar are lesser Ainur, akin to angels, who served the Valar and could take physical form in Middle-Earth, often assisting and guiding its inhabitants, sometimes even influencing events in subtle or significant ways.</p>
+      </div>
+      <div class="race-narrative"  id="elf-description">
+        <h5> - Elf - </h5>
+        <p>Elves are an ancient, wise, and beautiful race with immortality, renowned for their connection to nature, skill in crafts, and residence in places like Rivendell or Lothlórien.</p>
+      </div>
+      <div class="race-narrative"  id="dwarf-description">
+        <h5> - Dwarf - </h5>
+        <p>Dwarves are stout, hardy beings in Tolkien's world, known for their craftsmanship, mining skills, and love for riches and treasure.</p>
+      </div>
+      <div class="race-narrative"  id="men-description">
+        <h5> - Men - </h5>
+        <p>Humans in Tolkien's world, often referred to as Men, are mortal beings with great diversity in culture, ambition, and capacity for both good and evil.</p>
+      </div>
+      <div class="race-narrative"  id="hobbit-description">
+        <h5> - Hobbit - </h5>
+        <p>Hobbits are a diminutive, peace-loving folk known for their love of simple pleasures, good food, and comfortable living. They value friendship, loyalty, and a quiet life, often found in the pastoral settings of the Shire.</p>
+      </div>
+      <div class="race-narrative"  id="orc-description">
+        <h5> - Orc - </h5>
+        <p>The noble and immortal race of Elves in Tolkien's world was tragically twisted and corrupted by the dark powers of Morgoth into the malevolent Orcs, a brutal and cruel race known for their ferocity and lack of compassion in Middle-earth's conflicts.</p>
+      </div>
     </div>
   </div>
 
@@ -61,8 +87,10 @@
   <div class="character-cards" id="character-cards-container"></div>
   <template id="data-user-template">
     <div class="card">
-      <span class="name" data-name></span>
-      <span class="realm" data-realm></span>
+      <div class="name-realm">
+        <span class="name" data-name></span>
+        <span class="realm" data-realm></span>
+      </div>
       <div class="card-details">
         <div class="birth"data-birth></div>
         <div class="death" data-death></div>
