@@ -52,7 +52,8 @@
     const value = event.target.value.toLowerCase()
     characters.forEach(character => {
       const isVisible = character.name.toLowerCase().includes(value)
-      character.element.classList.toggle("hide" , !isVisible)
+      // character.element.classList.toggle("hide" , !isVisible)
+      character.element.style.display = isVisible ? 'block' : 'none';
     })
     console.log(value)
     console.log(characters)
@@ -75,7 +76,7 @@
         nameHeight.textContent = `Height: ${character.height || 'Unknown'}`
         nameBirth.textContent = `Birth: ${character.birth || 'Unknown'}`
         nameDeath.textContent = `Death: ${character.death || 'Unknown'}`
-        nameRealm.textContent = `of ${character.realm || 'Unknown'}`
+        nameRealm.textContent = character.realm && `of ${character.realm}`
         nameHair.textContent = `Hair: ${character.hair || 'Unknown'}`
         nameURL.innerHTML = `<a class="learn-more-link" href="${character.wikiUrl || 'N/A'}" target="_blank">Learn more</a>`
         characterCardContainer.append(card)
