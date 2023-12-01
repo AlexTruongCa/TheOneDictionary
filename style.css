@@ -35,7 +35,6 @@ h4{
   color:white;
   margin-right: 2rem;
   font-size: 1.5rem;
-  font-family: 'Bilbo', cursive;
 }
 h4 span{
   -webkit-text-fill-color: transparent;
@@ -121,7 +120,7 @@ li a:hover{
   padding-top: 110px;
 }
 .container{
-  margin: auto;
+  margin: 0px 350px 0px 350px;
   max-width: 1250px;
   padding: 0 2rem 6rem 2rem;
   position: relative;
@@ -267,9 +266,11 @@ h1{
   text-align: center;
 }
 .input-description{
-  padding: 0 200px;
+  /* padding: 0 200px; */
   font-size: 1.5rem;
   text-align: center;
+  margin: 0px 350px 0px 350px;
+
 }
 
 /*Dropdown menu*/
@@ -310,6 +311,42 @@ footer{
 }
 
 /*Responsive Design*/
+@media (max-width:1710px){
+  .container{
+    margin: 0px 250px 0px 250px;
+  }
+  .input-description{
+    margin: 0px 250px 0px 250px;  
+  }
+}
+
+@media (max-width:1425px){
+  .container{
+    margin: 0px 150px 0px 150px;
+  }
+  .input-description{
+    margin: 0px 150px 0px 150px;  
+  }
+}
+
+@media (max-width:1200px){
+  .container{
+    margin: 0px 50px 0px 50px;
+  }
+  .input-description{
+    margin: 0px 50px 0px 50px;  
+  }
+}
+
+@media (max-width:1200px){
+  .container{
+    margin: 0px 25px 0px 25px;
+  }
+  .input-description{
+    margin: 0px 25px 0px 25px;  
+  }
+}
+
 
 @media (max-width:996px){
   .nav-links{
@@ -319,59 +356,60 @@ footer{
   display: block;
   color: white;
   transition: all 0.5s ease;
-}
+  }
 .toggle-btn:hover{
   cursor: pointer;
   color: rgb(207, 206, 125);
-}
+  }
 .dropdown{
   display: block;
-}
-.input-description{
+  }
+/* .input-description{
   padding: 0 15%;
-}
+  } */
 }
 
 @media (max-width:810px){
 .dropdown{
   left: 2.5rem;
   width: unset;
-}
+  }
 .input-description{
   padding: 0 15%;
-}
+  font-size: 1rem;
+  }
 h1{
   padding: 5rem 20%;
-}
+  }
 .container{
   grid-template-columns: repeat(1, 1fr);
   text-align: center;
-}
+  }
 .container .races{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-}
+  }
 .container .races p{
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  }
 p{
   padding: 2.5rem 1rem;
-}
+  }
 .container .races p a:hover{
   cursor: pointer;
   font-size: 2.5rem;
-}
+  }
 .image-races{
   width: 50%;
   height: 50%;
   animation: rotateImage 180s linear infinite;
-}
+  }
 .calculation{
  flex-direction: column;
-}
+  }
 }
 
 @media (max-width:560px){
@@ -379,19 +417,19 @@ p{
     position: relative;
     height: 150px;
     align-items: start;
-   }
+  }
    .search-container{
     position: absolute;
     bottom: 40px;
     left: 50%;
     transform: translate(-50%, 50%);
-   }
+  }
    .toggle-btn{
     margin-top: 15px;
   }
-  .input-description{
+  /* .input-description{
     padding: 0 10%;
-  }
+  } */
   .search-results{
     display: none;
     position: fixed;
@@ -404,5 +442,6 @@ p{
     overflow-y: scroll;
     max-height: 100px;
     transition: all 0.5s ease;
-    }
+  }
 }
+

@@ -34,7 +34,6 @@ h4{
   color:white;
   margin-right: 2rem;
   font-size: 1.5rem;
-  font-family: 'Bilbo', cursive;
 }
 h4 span{
   -webkit-text-fill-color: transparent;
@@ -114,6 +113,14 @@ li a:hover{
   align-items: center;
   justify-content: center;
   transition: all 0.5s ease;
+}
+
+footer{
+  background-color: rgb(58, 57, 57);
+  box-shadow: 3px 0 5px rgba(0, 0, 0, 1);
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
 }
 
 /* PAGE LOADER */
@@ -210,8 +217,8 @@ li a:hover{
 .character-cards{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: .25rem;
-  padding: 1rem;
+  gap: 2rem;
+  padding: 2rem 8rem 2rem 8rem;
   background: linear-gradient(90deg, rgb(58, 57, 57), rgb(113, 129, 92));  
 }
 
@@ -276,25 +283,20 @@ li a:hover{
   display: none;
 }
 
-.button-containter{
-  position: relative;
-
-}
-.load-button{
-  background: linear-gradient(90deg, rgb(58, 57, 57), rgb(113, 129, 92));  
-  position: absolute;
-  top: 30%;
-  left: 49%;
-  transform: translate(-30%, -50%);
-}
-
+/* LOAD MORE BUTTON */
 #load-more{
-  display: block;
   padding: 9px;
+  text-align: center;
 }
-
 #load-more:hover{
   cursor: pointer;
+}
+.load-button{
+  background: linear-gradient(90deg, rgb(58, 57, 57), rgb(113, 129, 92)); 
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*FOOTER*/
@@ -354,7 +356,22 @@ footer{
 
 /*RESPONSIVE DESIGN*/
 
+@media (max-width:1108px) {
+  .character-cards{
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+  .card{
+    font-size: 1rem;
+  }
+}
+
 @media (max-width:996px){
+  .character-cards{
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+  .card{
+    font-size: 1rem;
+  }
   .nav-links{
     display: none;
   }
@@ -417,7 +434,19 @@ p{
 }
 }
 
+@media (max-width:600px){
+  .character-cards{
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    padding: 2rem 6rem 2rem 6rem;
+
+  }
+}
+
 @media (max-width:560px){
+  .character-cards{
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    padding: 2rem 4rem 2rem 4rem;
+  }
   nav{
     position: relative;
     height: 150px;
