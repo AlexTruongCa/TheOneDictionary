@@ -5,7 +5,9 @@
   font-family: 'Figtree', sans-serif;
   word-spacing: 5px;
 }
-
+p{
+  padding: 2.5rem 1rem;
+}
 .toggle-btn{
   display: none;
 }
@@ -287,9 +289,19 @@ footer{
 #load-more{
   padding: 9px;
   text-align: center;
+  color: rgb(124, 123, 123);
+  transition: all 0.5s ease;
+  background-color: rgb(255, 255, 255);
+  border: .15px solid rgb(85, 85, 85);
+  border-radius: 20px;
+  width: 120px;
+
 }
 #load-more:hover{
   cursor: pointer;
+  color: rgb(255, 255, 255);
+  background-color: rgb(233, 196, 118);
+  width: 135px;
 }
 .load-button{
   background: linear-gradient(90deg, rgb(58, 57, 57), rgb(113, 129, 92)); 
@@ -306,6 +318,7 @@ footer{
   text-align: center;
   color: white;
   font-size: 1.5rem;
+
 }
 
 /* PAGE LOADING */
@@ -417,9 +430,9 @@ h1{
   justify-content: center;
   align-items: center;
 }
-p{
+/* p{
   padding: 2.5rem 1rem;
-}
+} */
 .container .races p a:hover{
   cursor: pointer;
   font-size: 2.5rem;
