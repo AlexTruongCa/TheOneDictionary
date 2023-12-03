@@ -261,16 +261,43 @@ h1{
 .input-year p{
   font-size: 2rem;
 }
+
 .centered-input{
   font-size: 1.5rem;
   text-align: center;
 }
+
 .input-description{
   /* padding: 0 200px; */
   font-size: 1.5rem;
   text-align: center;
   margin: 0px 350px 0px 350px;
+}
 
+.container2{
+  position: relative;
+  overflow: hidden;
+}
+
+.image-races-2{
+  width: 3000px;
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+  top: -350px;
+  left: -1800px;
+  opacity: 0.15;
+  animation: rotateImage2 1200s linear infinite;
+}
+
+@keyframes rotateImage2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+
+  }
 }
 
 /*Dropdown menu*/
@@ -301,12 +328,13 @@ h1{
 }
 
 /*FOOTER*/
-footer{
+.footer{
   background-color: rgb(58, 57, 57);
   box-shadow: 3px 0 5px rgba(0, 0, 0, 1);
   text-align: center;
   color: white;
   font-size: 1.5rem;
+  z-index: 2;
   
 }
 
@@ -327,6 +355,16 @@ footer{
   .input-description{
     margin: 0px 150px 0px 150px;  
   }
+  .image-races-2{
+    width: 3000px;
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+    top: -350px;
+    left: -2000px;
+    opacity: 0.15;
+    animation: rotateImage2 1200s linear infinite;
+  }
 }
 
 @media (max-width:1200px){
@@ -336,14 +374,20 @@ footer{
   .input-description{
     margin: 0px 50px 0px 50px;  
   }
+
 }
 
-@media (max-width:1200px){
-  .container{
-    margin: 0px 25px 0px 25px;
-  }
-  .input-description{
-    margin: 0px 25px 0px 25px;  
+
+@media (max-width:1060px){
+  .image-races-2{
+    width: 3000px;
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+    top: -350px;
+    left: -2200px;
+    opacity: 0.15;
+    animation: rotateImage2 1200s linear infinite;
   }
 }
 
@@ -368,6 +412,9 @@ footer{
   padding: 0 15%;
   } */
 }
+
+
+
 
 @media (max-width:810px){
 .dropdown{
@@ -410,11 +457,21 @@ h1{
 .calculation{
  flex-direction: column;
   }
+  .image-races-2{
+    width: 800px;
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+    top: 350px;
+    left: -65%;
+    opacity: 0.15;
+    animation: rotateImage2 550s linear infinite;
+  }
 }
 
 @media (max-width:705px){
   nav{
-    position: relative;
+    position: fixed;
     height: 150px;
     align-items: start;
   }
@@ -427,9 +484,7 @@ h1{
    .toggle-btn{
     margin-top: 15px;
   }
-  /* .input-description{
-    padding: 0 10%;
-  } */
+
   .search-results{
     display: none;
     position: fixed;
@@ -442,12 +497,22 @@ h1{
     overflow-y: scroll;
     max-height: 100px;
     transition: all 0.5s ease;
+  }
+  .image-races-2{
+    width: 800px;
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+    top: 340px;
+    left: -65%;
+    opacity: 0.15;
+    animation: rotateImage2 550s linear infinite;
   }
 }
 
 @media (max-width:560px){
   nav{
-    position: relative;
+    position: fixed;
     height: 150px;
     align-items: start;
   }
@@ -460,9 +525,7 @@ h1{
    .toggle-btn{
     margin-top: 15px;
   }
-  /* .input-description{
-    padding: 0 10%;
-  } */
+
   .search-results{
     display: none;
     position: fixed;
@@ -475,6 +538,16 @@ h1{
     overflow-y: scroll;
     max-height: 100px;
     transition: all 0.5s ease;
+  }
+  .image-races-2{
+    width: 800px;
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+    top: 380px;
+    left: -90%;
+    opacity: 0.15;
+    animation: rotateImage2 550s linear infinite;
   }
 }
 
