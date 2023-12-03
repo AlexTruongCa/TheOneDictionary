@@ -167,7 +167,7 @@ footer{
   align-items: center;
   position: absolute;
   left: 36%;
-  top: 35%;
+  top: 28%;
   border-radius: 10px;
 }
 
@@ -370,12 +370,103 @@ footer{
 
 /*RESPONSIVE DESIGN*/
 
-@media (max-width:1108px) {
+@media (max-width:1550px) {
+  .race-description-container {
+    left: 36%;
+    top: 28%;
+  }
+  
+  .race-description {
+    padding: 10px;
+    width: 500px;
+  }
+  
+  .race-description p {
+    text-align: center;
+    font-size: 1.25rem;
+  }
+  
+  .race-description h5 {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+}
+
+@media (max-width:1350px) {
+  .race-description-container {
+    left: 34%;
+    top: 25%;
+  }
+  
+  .race-description {
+    padding: 8px;
+    width: 450px;
+  }
+  
+  .race-description p {
+    text-align: center;
+    font-size: 1.25rem;
+  }
+  
+  .race-description h5 {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+}
+
+
+@media (max-width:1250px) {
+  .race-description-container {
+    left: 34%;
+    top: 22%;
+  }
+  
+  .race-description {
+    padding: 8px;
+    width: 450px;
+  }
+  
+  .race-description p {
+    text-align: center;
+    font-size: 1.25rem;
+  }
+  
+  .race-description h5 {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+}
+
+@media (max-width:1145px) {
   .character-cards{
     grid-template-columns: repeat(2, minmax(200px, 1fr));
   }
   .card{
     font-size: 1rem;
+  }
+  .race-description-container {
+    left: 35%;
+    top: 25%;
+  }
+  
+  .race-description {
+    padding: 5px;
+    width: 350px;
+  }
+  
+  .race-description p {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .race-description h5 {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
   }
 }
 
@@ -404,8 +495,52 @@ footer{
 .input-description{
   padding: 0 15%;
 }
+.race-description-container {
+  left: 34%;
+  top: 25%;
 }
 
+.race-description {
+  padding: 5px;
+  width: 350px;
+}
+
+.race-description p {
+  text-align: center;
+  font-size: 0.95rem;
+  padding: 0.5rem;
+}
+
+.race-description h5 {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+}
+
+@media (max-width:900px){
+  .race-description-container {
+    left: 31%;
+    top: 23%;
+  }
+  
+  .race-description {
+    padding: 5px;
+    width: 350px;
+  }
+  
+  .race-description p {
+    text-align: center;
+    font-size: 0.95rem;
+    padding: 0.5rem;
+  }
+  
+  .race-description h5 {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+}
 @media (max-width:810px){
 .dropdown{
   left: 2.5rem;
@@ -446,16 +581,21 @@ h1{
 .calculation{
  flex-direction: column;
 }
+.race-description-container {
+  display: none;
+}
+
 }
 
 @media (max-width:600px){
   .character-cards{
     grid-template-columns: repeat(1, minmax(200px, 1fr));
     padding: 2rem 6rem 2rem 6rem;
-
+  }
+  .race-description-container {
+    display: none;
   }
 }
-
 @media (max-width:560px){
   .character-cards{
     grid-template-columns: repeat(1, minmax(200px, 1fr));
