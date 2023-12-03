@@ -412,6 +412,39 @@ h1{
   }
 }
 
+@media (max-width:705px){
+  nav{
+    position: relative;
+    height: 150px;
+    align-items: start;
+  }
+   .search-container{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+   .toggle-btn{
+    margin-top: 15px;
+  }
+  /* .input-description{
+    padding: 0 10%;
+  } */
+  .search-results{
+    display: none;
+    position: fixed;
+    top: 12px;
+    /* width: 100%; */
+    background-color: rgba(255, 255, 255, 0.9);
+
+    margin-top: 1rem;
+    border-radius: 10px;
+    overflow-y: scroll;
+    max-height: 100px;
+    transition: all 0.5s ease;
+  }
+}
+
 @media (max-width:560px){
   nav{
     position: relative;

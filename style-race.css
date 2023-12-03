@@ -203,7 +203,7 @@ footer{
 .character-card{
   border: 1px solid #ddd;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  margin: 5px;
+  margin: 5px;halifax
   padding: 5px;
   font-size: 1.5rem;
 }
@@ -219,6 +219,7 @@ footer{
 .character-cards{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  justify-content: center;
   gap: 2rem;
   padding: 2rem 8rem 2rem 8rem;
   background: linear-gradient(90deg, rgb(58, 57, 57), rgb(113, 129, 92));  

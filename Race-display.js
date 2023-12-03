@@ -240,7 +240,8 @@ let currentCard = 8
 
 loadMoreBtn.onclick = () => {
   let boxes = [...document.querySelectorAll('.card')]
-  for (let i = currentCard; i < currentCard +8 ; i++ ) {
+  // displaying addtional cards
+  for (let i = currentCard; i < currentCard +8 && i < boxes.length ; i++ ) {
     boxes[i].style.display = 'block'
   }
   currentCard += 8
@@ -249,7 +250,3 @@ loadMoreBtn.onclick = () => {
     loadMoreBtn.style.display = 'none'
   }
 }
-
-
-//SEARCH CHARACTER
-
