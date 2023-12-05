@@ -137,7 +137,6 @@ footer{
 .image-loader{
   display: none;
   position: absolute;
-  /* margin-top: 30px; */
   width: 30%;
   left: 36%;
   top: 18%;
@@ -172,7 +171,6 @@ footer{
 }
 
 .race-description {
-  /* border: 1px solid red; */
   padding: 15px;
   width: 500px;
 }
@@ -194,28 +192,6 @@ footer{
 
 /*CHARACTER CARD*/
 
-/* .card-container{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border: 5px solid blue;
-}
-
-.character-card{
-  border: 1px solid #ddd;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  margin: 5px;halifax
-  padding: 5px;
-  font-size: 1.5rem;
-}
-.character-card a{
-  color: black;
-  font-size: 1.5rem;
-  transition: all 0.5s ease;
-}
-.character-card a:hover{
-  color: rgb(207, 206, 125);
-} */
-
 .character-cards{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -224,7 +200,6 @@ footer{
   padding: 2rem 8rem 2rem 8rem;
   background: linear-gradient(90deg, rgb(58, 57, 57), rgb(113, 129, 92));  
 }
-
 
 .card{
   border: 1px solid black;
@@ -322,25 +297,6 @@ footer{
 
 }
 
-/* PAGE LOADING */
-/* .loader{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(113, 129, 92);
-  transition: opacity 0.75s, visibility 0.75s;
-}
-
-.loader-hidden{
-  opacity: 0;
-  visibility: hidden;
-} */
-
 
 /* Photo race */
 
@@ -362,11 +318,6 @@ footer{
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
   /* opacity: 0.8; */
 }
-
-
-
-/* SEARCH FILTER */
-
 
 /*RESPONSIVE DESIGN*/
 
@@ -566,18 +517,12 @@ h1{
   justify-content: center;
   align-items: center;
 }
-/* p{
-  padding: 2.5rem 1rem;
-} */
+
 .container .races p a:hover{
   cursor: pointer;
   font-size: 2.5rem;
 }
-/* .image-races{
-  width: 50%;
-  height: 50%;
-  animation: rotateImage 180s linear infinite;
-} */
+
 .calculation{
  flex-direction: column;
 }

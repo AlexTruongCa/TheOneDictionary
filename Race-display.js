@@ -33,15 +33,9 @@
     }
 
   const data = await response.json();
-  const characterData = data.docs;
-// console.log(data);
-
- 
+  const characterData = data.docs; 
 
 // Display the fetched data in the outputRace div
-
-  
-// const outputRace = document.getElementById('outputRace');
   const characterCardTemplate = document.getElementById('data-user-template')
   const characterCardContainer = document.getElementById('character-cards-container')
   const searchInput = document.getElementById('data-search')
@@ -52,19 +46,15 @@
     const value = event.target.value.toLowerCase()
     characters.forEach(character => {
       const isVisible = character.name.toLowerCase().includes(value)
-      // character.element.classList.toggle("hide" , !isVisible)
       character.element.style.display = isVisible ? 'block' : 'none';
     })
     console.log(value)
     console.log(characters)
   }) 
 
-// Delayed display of fetched data after 3 seconds
-  // setTimeout(() => {
     if (characterData.length > 0) {
       characters = characterData.map(character =>{
         const card = characterCardTemplate.content.cloneNode(true).children[0]
-        // console.log(character)
         const nameCharacter = card.querySelector("[data-name]") 
         const nameHeight = card.querySelector("[data-height]")
         const nameBirth = card.querySelector("[data-birth]")
@@ -83,22 +73,10 @@
         return {name: character.name, height: character.height, birth: character.birth, death: character.death, realm: character.realm, hair: character.hair, wikiUrl: character.wikiUrl, element: card}
       })
     
-      // const characterInfo = characterData.map(character => 
-      // `<div class="character-card">
-      //   <p>Name: ${character.name !=='' ? character.name : 'N/A'}</p>
-      //   <p>Height: ${character.height || 'N/A'}</p>
-      //   <p>Birth: ${character.birth || 'N/A'}</p>
-      //   <p>Death: ${character.death || 'N/A'}</p>
-      //   <p>Realm: ${character.realm || 'N/A'}</p>
-      //   <p>Hair: ${character.hair || 'N/A'}</p>
-      //   <a href="${character.wikiUrl || 'N/A'}" target="_blank">"Learn more"</a>
-      //   </div>`);
-      // outputRace.innerHTML = characterInfo.join('');
     } else {
       characterCardContainer.innerHTML = 'No characters found for this race';
     }
-  // } , 3000) //delay of 3 seconds before displaying data
-    
+
   } catch (error) {
     console.error('There was a problem with the fetch operation:', error);
     document.getElementById('character-cards-container').innerHTML = 'Error fetching data.';
@@ -147,33 +125,18 @@ if (race === 'Ainur') {
 
 // Call the fetchDataForRace function when the page loads
 
-// Try 1
-// window.addEventListener('load', fetchDataForRace);
-
-//Try 2
-// window.addEventListener('load', () => {
-//   const imageLoader = document.getElementById('image-loader')
-
-//   if (!fetchDataForRace) {
-//     imageLoader.style.display = 'block'
-//   } else (fetchDataForRace)
-// });
-
 window.addEventListener('load' , async () => {
   const imageLoader = document.getElementById('image-loader')
-  // const allPhotos = document.getElementById('allPhotos')
   const allPhotos = document.querySelectorAll('.photo-races')
   let loadMoreBtn = document.querySelector('#load-more')
 
   //Show the loader initally
   imageLoader.style.display = 'block'
-  // allPhotos.style.display = 'none'
   allPhotos.forEach(photo => {
     photo.style.opacity = '0.7'
     photo.style.background = 'grey'
-    // photo.style.display = 'block'
-  loadMoreBtn.style.display = 'none'
   })
+  loadMoreBtn.style.display = 'none'
 
   try {
     //Fetch data
@@ -181,14 +144,12 @@ window.addEventListener('load' , async () => {
 
     //Hide loader after fechting data
     imageLoader.style.display = 'none'
-    // allPhotos.style.display = 'block'
     
     allPhotos.forEach(photo => {
       photo.style.opacity = '1'
-      // photo.style.display = 'block'
-    loadMoreBtn.style.display = 'block'
     }) 
-    
+    loadMoreBtn.style.display = 'block'
+
   } catch (error) {
     console.log('There was an error fetching data' , error)
     
