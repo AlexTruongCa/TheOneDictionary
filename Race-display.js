@@ -106,43 +106,6 @@
 };
 
 // Display Race Photo
-
-// const photoAinur = document.getElementById ('photo-ainur')
-// const photoMaiar = document.getElementById ('photo-maiar')
-// const photoElves = document.getElementById ('photo-elves')
-// const photoDwarves = document.getElementById ('photo-dwarves')
-// const photoMen = document.getElementById ('photo-men')
-// const photoHobbit = document.getElementById ('photo-hobbits')
-// const photoOrcs = document.getElementById ('photo-orcs')
-
-// const elvesRaces = ['Elves' , 'Elf']
-// const dwarvesRaces = ['Dwarves' , 'Dwarf']
-// const menRaces = ['Human' , 'Men']
-// const ainurRaces = ['Ainur']
-// const maiarRaces = ['Maiar']
-// const hobbitRaces = ['Hobbit']
-// const orcsRaces = ['Orc']
-
-// const allRaces = [
-//   {name: elvesRaces, photoElement: photoElves},
-//   {name: dwarvesRaces, photoElement: photoDwarves},
-//   {name: menRaces, photoElement: photoMen},
-//   {name: ainurRaces, photoElement: photoAinur},
-//   {name: maiarRaces, photoElement: photoMaiar},
-//   {name: hobbitRaces, photoElement: photoHobbit},
-//   {name: orcsRaces, photoElement: photoHobbit}
-// ]
-
-// let matchedPhoto = photoOrcs
-
-// for (const raceSet of allRaces) {
-//   if (raceSet.name.includes(race)) {
-//     raceSet.photoElement.style.display = 'block'
-//     matchedPhoto = raceSet.photoElement
-//     break
-//   }
-// }
-
 const photoAinur = document.getElementById ('photo-ainur')
 const photoMaiar = document.getElementById ('photo-maiar')
 const photoElves = document.getElementById ('photo-elves')
@@ -150,10 +113,6 @@ const photoDwarves = document.getElementById ('photo-dwarves')
 const photoMen = document.getElementById ('photo-men')
 const photoHobbit = document.getElementById ('photo-hobbits')
 const photoOrcs = document.getElementById ('photo-orcs')
-
-// const elvesRaces = ['Elves' , 'Elf']
-// const dwarvesRaces = ['Dwarf' , 'Dwarves']
-// const menRaces = ['Human' , 'Men']
 
 const narAinur = document.getElementById ('valar-description')
 const narMaiar = document.getElementById ('maiar-description')
@@ -204,7 +163,8 @@ window.addEventListener('load' , async () => {
   const imageLoader = document.getElementById('image-loader')
   // const allPhotos = document.getElementById('allPhotos')
   const allPhotos = document.querySelectorAll('.photo-races')
-  
+  let loadMoreBtn = document.querySelector('#load-more')
+
   //Show the loader initally
   imageLoader.style.display = 'block'
   // allPhotos.style.display = 'none'
@@ -212,6 +172,7 @@ window.addEventListener('load' , async () => {
     photo.style.opacity = '0.7'
     photo.style.background = 'grey'
     // photo.style.display = 'block'
+  loadMoreBtn.style.display = 'none'
   })
 
   try {
@@ -225,6 +186,7 @@ window.addEventListener('load' , async () => {
     allPhotos.forEach(photo => {
       photo.style.opacity = '1'
       // photo.style.display = 'block'
+    loadMoreBtn.style.display = 'block'
     }) 
     
   } catch (error) {
