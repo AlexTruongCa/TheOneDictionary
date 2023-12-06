@@ -98,11 +98,6 @@ li a:hover{
   transition: all 0.5s ease;
   }
 
-/* .search-results.div.a:hover{
-  cursor: pointer;
-  color: red;
-} */
-
 .search-button{
   cursor: pointer;
   background: transparent;
@@ -329,13 +324,14 @@ h1{
 
 /*FOOTER*/
 .footer{
+  display: flex;
+  justify-content: space-evenly;
   background-color: rgb(58, 57, 57);
   box-shadow: 3px 0 5px rgba(0, 0, 0, 1);
   text-align: center;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1rem;
   z-index: 2;
-  
 }
 
 /*Responsive Design*/

@@ -1,0 +1,129 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Figtree', sans-serif;
+  word-spacing: 5px;
+}
+
+.toggle-btn{
+  display: none;
+}
+body{
+  /*background-image: url(image/background.jpg);*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+h1{
+  font-size: 2.5rem;
+  color: aliceblue;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+.nav-links{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+h4{
+  color:white;
+  margin-right: 2rem;
+  font-size: 1.5rem;
+}
+h4 span{
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: .5px rgb(255, 255, 255);
+  font-size: 2.5rem;
+}
+
+nav{
+ display: flex;
+ width: 100%;
+ position: fixed;
+ justify-content: space-between;
+ align-items: center;
+ padding: 30px 2.5rem;
+ background-color: rgb(58, 57, 57);
+ box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+ z-index: 1;
+}
+
+li{
+  display: inline-block;
+  padding: 0 15px;
+}
+
+li a{
+  transition: all 0.5s ease;
+}
+li a:hover{
+  color: rgb(207, 206, 125);
+}
+.search-container{
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.search-input{
+  border: 0;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  background: transparent;
+  outline: none;
+}
+.search-results{
+  display: none;
+  position: fixed;
+  top: 54px;
+  /* width: 100%; */
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-top: 1rem;
+  border-radius: 10px;
+  overflow-y: scroll;
+  max-height: 100px;
+  transition: all 0.5s ease;
+  }
+
+.search-button{
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  padding-left: 1rem;
+}
+
+.hide{
+  display: none;
+}
+
+.about-me{
+  background-color: rebeccapurple;
+  padding: 250px 150px 150px 150px;
+  font-size: 1.75rem;
+}
+
+/*FOOTER*/
+.footer{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(58, 57, 57);
+  box-shadow: 3px 0 5px rgba(0, 0, 0, 1);
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  z-index: 2;
+}
