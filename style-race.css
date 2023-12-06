@@ -44,12 +44,15 @@ h4 span{
 }
 
 nav{
- display: flex;
- justify-content: space-between;
- align-items: center;
- padding: 30px 2.5rem;
- background-color: rgb(58, 57, 57);
- box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+  /* position: fixed; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 2.5rem;
+  background-color: rgb(58, 57, 57);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+  z-index: 99;
 }
 
 li{
@@ -300,7 +303,6 @@ footer{
 
 }
 
-
 /* Photo race */
 
 .photo-races-containter {
@@ -324,7 +326,7 @@ footer{
 
 /*RESPONSIVE DESIGN*/
 
-@media (max-width:1550px) {
+@media (max-width:1575px) {
   .race-description-container {
     left: 36%;
     top: 28%;
@@ -347,10 +349,10 @@ footer{
   }
 }
 
-@media (max-width:1350px) {
+@media (max-width:1440px) {
   .race-description-container {
-    left: 34%;
-    top: 25%;
+    left: 35%;
+    top: 20%;
   }
   
   .race-description {
@@ -371,20 +373,21 @@ footer{
 }
 
 
-@media (max-width:1250px) {
+@media (max-width:1310px) {
   .race-description-container {
     left: 34%;
-    top: 22%;
+    top: 18%;
   }
   
   .race-description {
-    padding: 8px;
+    padding: 5px;
     width: 450px;
   }
   
   .race-description p {
     text-align: center;
     font-size: 1.25rem;
+    padding-bottom: 10px;
   }
   
   .race-description h5 {
@@ -403,7 +406,7 @@ footer{
   }
   .race-description-container {
     left: 35%;
-    top: 25%;
+    top: 20%;
   }
   
   .race-description {
@@ -450,8 +453,8 @@ footer{
   padding: 0 15%;
 }
 .race-description-container {
-  left: 34%;
-  top: 25%;
+  left: 30%;
+  top: 18%;
 }
 
 .race-description {
@@ -461,7 +464,7 @@ footer{
 
 .race-description p {
   text-align: center;
-  font-size: 0.95rem;
+  font-size: 1rem;
   padding: 0.5rem;
 }
 
@@ -472,10 +475,10 @@ footer{
 }
 }
 
-@media (max-width:900px){
+@media (max-width:930px){
   .race-description-container {
-    left: 31%;
-    top: 23%;
+    left: 30%;
+    top: 18%;
   }
   
   .race-description {
@@ -485,7 +488,7 @@ footer{
   
   .race-description p {
     text-align: center;
-    font-size: 0.95rem;
+    font-size: 1rem;
     padding: 0.5rem;
   }
   
@@ -495,6 +498,7 @@ footer{
     font-weight: 600;
   }
 }
+
 @media (max-width:810px){
 .dropdown{
   left: 2.5rem;
@@ -532,7 +536,18 @@ h1{
 .race-description-container {
   display: none;
 }
-
+nav{
+  position: relative;
+  height: 150px;
+  align-items: start;
+  
+ }
+ .search-container{
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+ }
 }
 
 @media (max-width:600px){
@@ -543,7 +558,20 @@ h1{
   .race-description-container {
     display: none;
   }
+  nav{
+    position: relative;
+    height: 150px;
+    align-items: start;
+    
+   }
+   .search-container{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+   }
 }
+
 @media (max-width:560px){
   .character-cards{
     grid-template-columns: repeat(1, minmax(200px, 1fr));
@@ -553,6 +581,7 @@ h1{
     position: relative;
     height: 150px;
     align-items: start;
+    
    }
    .search-container{
     position: absolute;
