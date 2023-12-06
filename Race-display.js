@@ -15,6 +15,7 @@
 // Extract the 'race' query parameter from the URL
   const urlParams = new URLSearchParams(window.location.search);
   const race = urlParams.get('race');
+  document.title = race
 
 // Function to fetch and display data for the specified race
   const fetchDataForRace = async () => {

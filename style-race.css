@@ -171,7 +171,7 @@ li a:hover{
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 36%;
+  left: calc(50vw - 250px);
   top: 28%;
   border-radius: 10px;
 }
@@ -328,7 +328,7 @@ footer{
 
 @media (max-width:1575px) {
   .race-description-container {
-    left: 36%;
+    left: calc(50vw - 250px);
     top: 28%;
   }
   
@@ -351,7 +351,7 @@ footer{
 
 @media (max-width:1440px) {
   .race-description-container {
-    left: 35%;
+    left: calc(50vw - 250px);
     top: 20%;
   }
   
@@ -375,7 +375,7 @@ footer{
 
 @media (max-width:1310px) {
   .race-description-container {
-    left: 34%;
+    left: calc(50vw - 250px);
     top: 18%;
   }
   
@@ -405,7 +405,7 @@ footer{
     font-size: 1rem;
   }
   .race-description-container {
-    left: 35%;
+    left: calc(50vw - 250px);
     top: 20%;
   }
   
@@ -453,7 +453,7 @@ footer{
   padding: 0 15%;
 }
 .race-description-container {
-  left: 30%;
+  left: calc(50vw - 250px);
   top: 18%;
 }
 
@@ -477,7 +477,7 @@ footer{
 
 @media (max-width:930px){
   .race-description-container {
-    left: 30%;
+    left: calc(50vw - 250px);
     top: 18%;
   }
   

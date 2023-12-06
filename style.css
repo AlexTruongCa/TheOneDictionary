@@ -116,7 +116,7 @@ li a:hover{
 }
 .container{
   margin: 0px 350px 0px 350px;
-  max-width: 1250px;
+  /* max-width: 1250px; */
   padding: 0 2rem 6rem 2rem;
   position: relative;
   display: grid;
