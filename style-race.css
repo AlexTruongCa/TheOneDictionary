@@ -144,7 +144,7 @@ li a:hover{
 }
 .image-loader{
   display: none;
-  position: absolute;
+  /* position: absolute; */
   width: 28%;
   /* left: 36%; */
   top: 16%;
@@ -328,7 +328,7 @@ footer{
 
 /*RESPONSIVE DESIGN*/
 
-@media (max-width:1575px) {
+/* @media (max-width:1575px) {
   .image-loader{   
     top: 16%;
   }
@@ -338,14 +338,14 @@ footer{
   .image-loader{   
     top: 15%;
   }
-}
+} */
 
 
-@media (max-width:1310px) {
+/* @media (max-width:1310px) {
   .image-loader{   
     top: 15%;
   }
-}
+} */
 
 @media (max-width:1145px) {
   .character-cards{
@@ -357,9 +357,9 @@ footer{
   .race-description-container {
     margin-top: 7%;
   }
-  .image-loader{   
+  /* .image-loader{   
     top: 15%;
-  }
+  } */
 }
 
 @media (max-width:1040px){
@@ -387,7 +387,6 @@ footer{
   .race-description p {
     font-size: 1.25rem;
   }
-  
   .race-description h5 {
     font-size: 1.75rem;
   }
@@ -428,9 +427,9 @@ footer{
 .race-description h5 {
   font-size: 1.75rem;
 }
-.image-loader{   
+/* .image-loader{   
   top: 15%;
-}
+} */
 }
 
 @media (max-width:930px){
@@ -444,9 +443,9 @@ footer{
   .race-description h5 {
     font-size: 1.7rem;
   }
-  .image-loader{   
+  /* .image-loader{   
     top: 13.5%;
-  }
+  } */
 }
 
 @media (max-width:810px){
@@ -509,9 +508,9 @@ nav{
   left: 50%;
   transform: translate(-50%, 50%);
  }
- .image-loader{   
+ /* .image-loader{   
   top: 18%;
-}
+} */
 }
 
 @media (max-width:600px){
@@ -524,7 +523,7 @@ nav{
     margin-top: 4%;
   }
   .race-description {
-    padding: 15px 12% 15px 12%;
+    padding: 5px 12% 15px 12%;
   }
   .race-description p {
     font-size: 0.75rem;
@@ -533,9 +532,9 @@ nav{
   .race-description h5 {
     font-size: 1.2rem;
   }
-   .image-loader{   
+   /* .image-loader{   
     top: 17.5%;
-  }
+  } */
 }
 
 @media (max-width:560px){
@@ -561,7 +560,7 @@ nav{
   .input-description{
     padding: 0 10%;
   }
-  .image-loader{   
+  /* .image-loader{   
     top: 17.5%;
-  }
+  } */
 }

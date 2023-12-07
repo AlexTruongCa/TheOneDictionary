@@ -144,7 +144,7 @@ window.addEventListener('load' , async () => {
     await fetchDataForRace()
 
     //Hide loader after fechting data
-    imageLoader.style.display = 'none'
+    imageLoader.style.display = 'block'
     
     allPhotos.forEach(photo => {
       photo.style.opacity = '1'
