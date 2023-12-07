@@ -100,9 +100,9 @@ li a:hover{
   position:absolute;
   height: 0;
   right: 2.5rem;
-  top: 80px;
-  width: 100px;
-  background-color: rgba(0, 0, 0, 0.1);
+  top: 91px;
+  width: 150px;
+  background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(5px);
   border-radius: 5px;
   overflow: hidden;
@@ -451,7 +451,8 @@ footer{
 @media (max-width:810px){
 .dropdown{
   left: 2.5rem;
-  width: unset;
+  width: auto;
+  margin-top: 60px;
 }
 .input-description{
   padding: 0 15%;
