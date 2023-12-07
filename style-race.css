@@ -145,7 +145,7 @@ li a:hover{
   position: absolute;
   width: 30%;
   left: 36%;
-  top: 18%;
+  top: 16%;
   transform: translate(-50%);
   animation: rotateImage 180s linear infinite;
   z-index: 90;
@@ -347,6 +347,9 @@ footer{
     font-size: 1.75rem;
     font-weight: 600;
   }
+  .image-loader{   
+    top: 16%;
+  }
 }
 
 @media (max-width:1440px) {
@@ -369,6 +372,9 @@ footer{
     text-align: center;
     font-size: 1.75rem;
     font-weight: 600;
+  }
+  .image-loader{   
+    top: 15%;
   }
 }
 
@@ -394,6 +400,9 @@ footer{
     text-align: center;
     font-size: 1.75rem;
     font-weight: 600;
+  }
+  .image-loader{   
+    top: 15%;
   }
 }
 
@@ -425,6 +434,9 @@ footer{
     font-size: 1.25rem;
     font-weight: 600;
   }
+  .image-loader{   
+    top: 15%;
+  }
 }
 
 @media (max-width:1040px){
@@ -442,6 +454,9 @@ footer{
   }
   .dropdown{
   display: block;
+  }
+  .image-loader{   
+    top: 15%;
   }
 }
 
@@ -491,6 +506,9 @@ footer{
   font-size: 1.25rem;
   font-weight: 600;
 }
+.image-loader{   
+  top: 15%;
+}
 }
 
 @media (max-width:930px){
@@ -514,6 +532,9 @@ footer{
     text-align: center;
     font-size: 1.25rem;
     font-weight: 600;
+  }
+  .image-loader{   
+    top: 13.5%;
   }
 }
 
@@ -566,6 +587,9 @@ nav{
   left: 50%;
   transform: translate(-50%, 50%);
  }
+ .image-loader{   
+  top: 18%;
+}
 }
 
 @media (max-width:600px){
@@ -588,6 +612,9 @@ nav{
     left: 50%;
     transform: translate(-50%, 50%);
    }
+   .image-loader{   
+    top: 17.5%;
+  }
 }
 
 @media (max-width:560px){
@@ -613,9 +640,7 @@ nav{
   .input-description{
     padding: 0 10%;
   }
-  .image-loader{
-    width: 30%;
-    left: 36%;
-    top: 25%;
+  .image-loader{   
+    top: 17.5%;
   }
 }
