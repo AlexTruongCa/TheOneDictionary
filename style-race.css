@@ -427,6 +427,24 @@ footer{
   }
 }
 
+@media (max-width:1040px){
+  .nav-links{
+    display: none;
+  }
+  .toggle-btn{
+  display: block;
+  color: white;
+  transition: all 0.5s ease;
+  }
+  .toggle-btn:hover{
+  cursor: pointer;
+  color: rgb(207, 206, 125);
+  }
+  .dropdown{
+  display: block;
+  }
+}
+
 @media (max-width:996px){
   .character-cards{
     grid-template-columns: repeat(1, minmax(200px, 1fr));
@@ -594,5 +612,10 @@ nav{
   }
   .input-description{
     padding: 0 10%;
+  }
+  .image-loader{
+    width: 30%;
+    left: 36%;
+    top: 25%;
   }
 }

@@ -111,7 +111,7 @@ li a:hover{
 }
 
 .about-me{
-  padding: 250px 150px 145px 150px;
+  padding: 200px 8% 100px 8%;
   font-size: 1.5rem;
   text-align: center;
   line-height: 45px;
@@ -121,8 +121,8 @@ li a:hover{
   font-style: italic;
   font-weight: 700;
   color: rgb(170, 168, 41);
-
 }
+
 /*Dropdown menu*/
 .dropdown{
   display: none;
@@ -223,21 +223,22 @@ li a:hover{
   .nav-links{
     display: none;
   }
-.toggle-btn{
+  .toggle-btn{
   display: block;
   color: white;
   transition: all 0.5s ease;
   }
-.toggle-btn:hover{
+  .toggle-btn:hover{
   cursor: pointer;
   color: rgb(207, 206, 125);
   }
-.dropdown{
+  .dropdown{
   display: block;
   }
-/* .input-description{
-  padding: 0 15%;
-  } */
+  .about-me{
+    font-size: 1.2rem;
+    line-height: 45px;
+  }
 }
 
 

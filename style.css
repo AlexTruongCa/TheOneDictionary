@@ -79,7 +79,7 @@ li a:hover{
   border: 0;
   border-style: solid;
   border-radius: 5px;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   font-size: 1.5rem;
   margin-bottom: 0;
   background: transparent;
@@ -173,75 +173,6 @@ p{
   }
 }
 
-/*Time calculation
-
-.container2 h1{
-  text-align: center;
-  padding: 4rem 0;
-}
-.container2{
-  margin: auto;
-  background-image: url(image/container2.png);
-  padding-bottom: 5rem;
-}
-.calculation{
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-}
-.container2{
-  padding-bottom: 100rem;
-}
-
-back up container 2
-h1{
-  padding-top: 4rem;
-  text-align: center;
-  color: black;
-}
-.calculation p{
-  color: rgb(255, 0, 0);
-  margin: 0;
-  padding: 0;
-}
-.container2-calculation{
-  display: grid;
-  margin: auto;
-  max-width: 1250px;
-  grid-template-columns: 1fr;
-}
-.calculation{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-.calculation .input-year{
-  padding: 4rem 0;
-  font-size: 2rem;
-}
-
-.container2 p{
-  display: block;
-  max-width: 1250px;
-  text-align: center;
-}
-
-.input-year{
-  padding-bottom: 0;
-}
-.input-year input{
-  padding: 1rem;
-  margin-top: 10px;
-  font-size: 2rem;
-}
-
-.container2-calculation p{
-  font-size: 1.5rem;
-  line-height: 35px;
-}
-
-*/
-
 .container2 h1{
   color: black;
 }
@@ -263,10 +194,9 @@ h1{
 }
 
 .input-description{
-  /* padding: 0 200px; */
   font-size: 1.5rem;
   text-align: center;
-  margin: 0px 350px 0px 350px;
+  margin: 0px 12% 0px 12%;
 }
 
 .container2{
@@ -340,7 +270,7 @@ h1{
     margin: 0px 250px 0px 250px;
   }
   .input-description{
-    margin: 0px 250px 0px 250px;  
+    margin: 0px 12% 0px 12%;  
   }
 }
 
@@ -349,7 +279,7 @@ h1{
     margin: 0px 150px 0px 150px;
   }
   .input-description{
-    margin: 0px 150px 0px 150px;  
+    margin: 0px 12% 0px 12%;  
   }
   .image-races-2{
     width: 3000px;
@@ -368,7 +298,7 @@ h1{
     margin: 0px 50px 0px 50px;
   }
   .input-description{
-    margin: 0px 50px 0px 50px;  
+    margin: 0px 12% 0px 12%;  
   }
 
 }
@@ -385,11 +315,26 @@ h1{
     opacity: 0.15;
     animation: rotateImage2 1200s linear infinite;
   }
+  .nav-links{
+    display: none;
+  }
+  .toggle-btn{
+  display: block;
+  color: white;
+  transition: all 0.5s ease;
+  }
+  .toggle-btn:hover{
+  cursor: pointer;
+  color: rgb(207, 206, 125);
+  }
+  .dropdown{
+  display: block;
+  }
 }
 
 
 @media (max-width:996px){
-  .nav-links{
+.nav-links{
     display: none;
   }
 .toggle-btn{
@@ -404,9 +349,6 @@ h1{
 .dropdown{
   display: block;
   }
-/* .input-description{
-  padding: 0 15%;
-  } */
 }
 
 
@@ -418,7 +360,7 @@ h1{
   width: unset;
   }
 .input-description{
-  padding: 0 15%;
+  padding: 0 5%;
   font-size: 1rem;
   }
 h1{
