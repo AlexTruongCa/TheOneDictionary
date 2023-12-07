@@ -141,7 +141,7 @@ li a:hover{
   padding-bottom: 0;
 }
 .image-loader{
-  display: block;
+  display: none;
   position: absolute;
   width: 30%;
   left: 36%;
@@ -165,25 +165,25 @@ li a:hover{
 
 
 .race-description-container {
-  background-color: rgba(255, 255, 255, 0.5);
+  /* background-color: rgba(59, 59, 59, 0.5); */
+  color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   position: absolute;
-  left: calc(50vw - 250px);
-  top: 28%;
-  border-radius: 10px;
+  /* border-radius: 10px; */
+  margin-top: 10%;
 }
 
 .race-description {
-  padding: 15px;
-  width: 500px;
+  padding: 15px 20% 15px 20%;
 }
 
 .race-description p {
   text-align: center;
   font-size: 1.5rem;
+  padding-top: 10px;
+  padding-bottom: 0;
 }
 
 .race-description h5 {
@@ -327,52 +327,12 @@ footer{
 /*RESPONSIVE DESIGN*/
 
 @media (max-width:1575px) {
-  .race-description-container {
-    left: calc(50vw - 250px);
-    top: 28%;
-  }
-  
-  .race-description {
-    padding: 10px;
-    width: 500px;
-  }
-  
-  .race-description p {
-    text-align: center;
-    font-size: 1.25rem;
-  }
-  
-  .race-description h5 {
-    text-align: center;
-    font-size: 1.75rem;
-    font-weight: 600;
-  }
   .image-loader{   
     top: 16%;
   }
 }
 
 @media (max-width:1440px) {
-  .race-description-container {
-    left: calc(50vw - 250px);
-    top: 20%;
-  }
-  
-  .race-description {
-    padding: 8px;
-    width: 450px;
-  }
-  
-  .race-description p {
-    text-align: center;
-    font-size: 1.25rem;
-  }
-  
-  .race-description h5 {
-    text-align: center;
-    font-size: 1.75rem;
-    font-weight: 600;
-  }
   .image-loader{   
     top: 15%;
   }
@@ -380,27 +340,6 @@ footer{
 
 
 @media (max-width:1310px) {
-  .race-description-container {
-    left: calc(50vw - 250px);
-    top: 18%;
-  }
-  
-  .race-description {
-    padding: 5px;
-    width: 450px;
-  }
-  
-  .race-description p {
-    text-align: center;
-    font-size: 1.25rem;
-    padding-bottom: 10px;
-  }
-  
-  .race-description h5 {
-    text-align: center;
-    font-size: 1.75rem;
-    font-weight: 600;
-  }
   .image-loader{   
     top: 15%;
   }
@@ -414,25 +353,7 @@ footer{
     font-size: 1rem;
   }
   .race-description-container {
-    left: calc(50vw - 250px);
-    top: 20%;
-  }
-  
-  .race-description {
-    padding: 5px;
-    width: 350px;
-  }
-  
-  .race-description p {
-    text-align: center;
-    font-size: 1rem;
-    padding: 0.5rem;
-  }
-  
-  .race-description h5 {
-    text-align: center;
-    font-size: 1.25rem;
-    font-weight: 600;
+    margin-top: 7%;
   }
   .image-loader{   
     top: 15%;
@@ -457,6 +378,16 @@ footer{
   }
   .image-loader{   
     top: 15%;
+  }
+  .race-description-container {
+    margin-top: 7%;
+  }
+  .race-description p {
+    font-size: 1.25rem;
+  }
+  
+  .race-description h5 {
+    font-size: 1.75rem;
   }
 }
 
@@ -486,25 +417,14 @@ footer{
   padding: 0 15%;
 }
 .race-description-container {
-  left: calc(50vw - 250px);
-  top: 18%;
+  margin-top: 6%;
 }
-
-.race-description {
-  padding: 5px;
-  width: 350px;
-}
-
 .race-description p {
-  text-align: center;
-  font-size: 1rem;
-  padding: 0.5rem;
+  font-size: 1.25rem;
 }
 
 .race-description h5 {
-  text-align: center;
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.75rem;
 }
 .image-loader{   
   top: 15%;
@@ -513,25 +433,14 @@ footer{
 
 @media (max-width:930px){
   .race-description-container {
-    left: calc(50vw - 250px);
-    top: 18%;
+    margin-top: 6%;
   }
-  
-  .race-description {
-    padding: 5px;
-    width: 350px;
-  }
-  
   .race-description p {
-    text-align: center;
-    font-size: 1rem;
-    padding: 0.5rem;
+    font-size: 1.1rem;
   }
   
   .race-description h5 {
-    text-align: center;
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 1.7rem;
   }
   .image-loader{   
     top: 13.5%;
@@ -573,8 +482,19 @@ h1{
  flex-direction: column;
 }
 .race-description-container {
-  display: none;
+  margin-top: 4%;
 }
+.race-description {
+  padding: 15px 12% 15px 12%;
+}
+.race-description p {
+  font-size: 1rem;
+}
+
+.race-description h5 {
+  font-size: 1.5rem;
+}
+
 nav{
   position: relative;
   height: 150px;
@@ -597,21 +517,20 @@ nav{
     grid-template-columns: repeat(1, minmax(200px, 1fr));
     padding: 2rem 6rem 2rem 6rem;
   }
+
   .race-description-container {
-    display: none;
+    margin-top: 4%;
   }
-  nav{
-    position: relative;
-    height: 150px;
-    align-items: start;
-    
-   }
-   .search-container{
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translate(-50%, 50%);
-   }
+  .race-description {
+    padding: 15px 12% 15px 12%;
+  }
+  .race-description p {
+    font-size: 0.75rem;
+  }
+  
+  .race-description h5 {
+    font-size: 1.2rem;
+  }
    .image-loader{   
     top: 17.5%;
   }
