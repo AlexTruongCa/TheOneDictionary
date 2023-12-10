@@ -44,7 +44,7 @@ h4 span{
 }
 
 nav{
-  /* position: fixed; */
+  position: fixed;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -52,7 +52,7 @@ nav{
   padding: 30px 2.5rem;
   background-color: rgb(58, 57, 57);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
-  z-index: 99;
+  z-index: 121;
 }
 
 li{
@@ -134,19 +134,15 @@ li a:hover{
 /* PAGE LOADER */
 
 .image-loader-container{
-  /* overflow: hidden; */
   display: flex;
   justify-content: center;
   background: linear-gradient(90deg, rgb(58, 57, 57), rgb(113, 129, 92));  
   margin-bottom: 0;
   padding-top: 2rem;
-  /* padding-bottom: 0; */
 }
 .image-loader{
   display: none;
-  /* position: absolute; */
   width: 28%;
-  /* left: 36%; */
   top: 16%;
   transform: translate(-50%);
   animation: rotateImage 180s linear infinite;
@@ -168,13 +164,15 @@ li a:hover{
 
 .race-description-container {
   /* background-color: rgba(59, 59, 59, 0.5); */
+  width: 100%;
   color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
   /* border-radius: 10px; */
-  margin-top: 10%;
+  margin-top: 18%;
+  z-index: 120;
 }
 
 .race-description {
@@ -308,14 +306,12 @@ footer{
 /* Photo race */
 
 .photo-races-containter {
-  border: none solid red;
   display: grid;
-  margin-top: -16px;
+  padding-top: 105px;
   place-items: center; /*Aligns the content both horizontally and vertically */
   width: 100%;
   height: 50%;
-  background: linear-gradient(90deg, rgb(58, 57, 57), rgb(113, 129, 92));  
-
+  background: linear-gradient(90deg, rgb(58, 57, 57), rgb(113, 129, 92));
 }
 
 .photo-races {
@@ -323,29 +319,10 @@ footer{
   width: 100%;
   object-fit: contain;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
-  /* opacity: 0.8; */
+  opacity: 0.8;
 }
 
 /*RESPONSIVE DESIGN*/
-
-/* @media (max-width:1575px) {
-  .image-loader{   
-    top: 16%;
-  }
-}
-
-@media (max-width:1440px) {
-  .image-loader{   
-    top: 15%;
-  }
-} */
-
-
-/* @media (max-width:1310px) {
-  .image-loader{   
-    top: 15%;
-  }
-} */
 
 @media (max-width:1145px) {
   .character-cards{
@@ -355,11 +332,8 @@ footer{
     font-size: 1rem;
   }
   .race-description-container {
-    margin-top: 7%;
+    margin-top: 18%;
   }
-  /* .image-loader{   
-    top: 15%;
-  } */
 }
 
 @media (max-width:1040px){
@@ -382,7 +356,7 @@ footer{
     top: 15%;
   }
   .race-description-container {
-    margin-top: 7%;
+    margin-top: 18%;
   }
   .race-description p {
     font-size: 1.25rem;
@@ -418,7 +392,7 @@ footer{
   padding: 0 15%;
 }
 .race-description-container {
-  margin-top: 6%;
+  margin-top: 18%;
 }
 .race-description p {
   font-size: 1.25rem;
@@ -427,14 +401,11 @@ footer{
 .race-description h5 {
   font-size: 1.75rem;
 }
-/* .image-loader{   
-  top: 15%;
-} */
 }
 
 @media (max-width:930px){
   .race-description-container {
-    margin-top: 6%;
+    margin-top: 18%;
   }
   .race-description p {
     font-size: 1.1rem;
@@ -443,9 +414,6 @@ footer{
   .race-description h5 {
     font-size: 1.7rem;
   }
-  /* .image-loader{   
-    top: 13.5%;
-  } */
 }
 
 @media (max-width:810px){
@@ -484,7 +452,7 @@ h1{
  flex-direction: column;
 }
 .race-description-container {
-  margin-top: 4%;
+  margin-top: 8%;
 }
 .race-description {
   padding: 15px 12% 15px 12%;
@@ -509,9 +477,9 @@ nav{
   left: 50%;
   transform: translate(-50%, 50%);
  }
- /* .image-loader{   
-  top: 18%;
-} */
+ .photo-races-containter {
+  padding-top: 0px;
+}
 }
 
 @media (max-width:600px){
@@ -521,21 +489,18 @@ nav{
   }
 
   .race-description-container {
-    margin-top: 4%;
+    margin-top: 8%;
   }
   .race-description {
-    padding: 5px 12% 15px 12%;
+    padding: 5px 11% 15px 11%;
   }
   .race-description p {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
   }
   
   .race-description h5 {
     font-size: 1.2rem;
   }
-   /* .image-loader{   
-    top: 17.5%;
-  } */
 }
 
 @media (max-width:560px){
@@ -561,7 +526,4 @@ nav{
   .input-description{
     padding: 0 10%;
   }
-  /* .image-loader{   
-    top: 17.5%;
-  } */
 }

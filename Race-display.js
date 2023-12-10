@@ -134,7 +134,7 @@ window.addEventListener('load' , async () => {
   //Show the loader initally
   imageLoader.style.display = 'block'
   allPhotos.forEach(photo => {
-    photo.style.opacity = '0.7'
+    photo.style.opacity = '0.3'
     photo.style.background = 'grey'
   })
   loadMoreBtn.style.display = 'none'
@@ -147,7 +147,7 @@ window.addEventListener('load' , async () => {
     imageLoader.style.display = 'none'
     
     allPhotos.forEach(photo => {
-      photo.style.opacity = '1'
+      photo.style.opacity = '0.5'
     }) 
     loadMoreBtn.style.display = 'block'
 
