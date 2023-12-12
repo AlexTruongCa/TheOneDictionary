@@ -88,7 +88,6 @@ li a:hover{
   display: none;
   position: fixed;
   top: 54px;
-  /* width: 100%; */
   background-color: rgba(255, 255, 255, 0.9);
   margin-top: 1rem;
   border-radius: 10px;

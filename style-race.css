@@ -12,7 +12,6 @@ p{
   display: none;
 }
 body{
-  /*background-image: url(image/background.jpg);*/
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -163,14 +162,12 @@ li a:hover{
 
 
 .race-description-container {
-  /* background-color: rgba(59, 59, 59, 0.5); */
   width: 100%;
   color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
-  /* border-radius: 10px; */
   margin-top: 18%;
   z-index: 120;
 }
