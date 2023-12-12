@@ -67,8 +67,8 @@
 
         nameCharacter.textContent = `${character.name || 'N/A'}`
         nameHeight.textContent = `Height: ${character.height || 'Unknown'}`
-        nameBirth.textContent = `Birth: ${character.birth || 'Unknown'}`
-        nameDeath.textContent = `Death: ${character.death || 'Unknown'}`
+        nameBirth.textContent = `Birth: ${(character.birth || 'Unknown').replaceAll(',', '')} `
+        nameDeath.textContent = `Death: ${(character.death || 'Unknown').replaceAll(',', '')}`
         
         if (character.realm != 'NaN') {
           nameRealm.textContent = character.realm && `of ${character.realm}`
