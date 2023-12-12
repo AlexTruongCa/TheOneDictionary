@@ -55,6 +55,7 @@
 
     if (characterData.length > 0) {
       characters = characterData.map(character =>{
+        
         const card = characterCardTemplate.content.cloneNode(true).children[0]
         const nameCharacter = card.querySelector("[data-name]") 
         const nameHeight = card.querySelector("[data-height]")
@@ -63,15 +64,37 @@
         const nameRealm = card.querySelector("[data-realm]")
         const nameHair = card.querySelector("[data-hair]")
         const nameURL = card.querySelector("[data-url]")
+
         nameCharacter.textContent = `${character.name || 'N/A'}`
         nameHeight.textContent = `Height: ${character.height || 'Unknown'}`
         nameBirth.textContent = `Birth: ${character.birth || 'Unknown'}`
         nameDeath.textContent = `Death: ${character.death || 'Unknown'}`
-        nameRealm.textContent = character.realm && `of ${character.realm}`
+        
+        if (character.realm != 'NaN') {
+          nameRealm.textContent = character.realm && `of ${character.realm}`
+        } else {
+          nameRealm.style.display = 'none'
+        }
+        console.log(nameRealm)
         nameHair.textContent = `Hair: ${character.hair || 'Unknown'}`
-        nameURL.innerHTML = `<a class="learn-more-link" href="${character.wikiUrl || 'N/A'}" target="_blank">Learn more</a>`
+        
+        if (character.wikiUrl) {
+          nameURL.innerHTML = `<a class="learn-more-link" href="${character.wikiUrl || 'N/A'}" target="_blank">Learn more</a>`
+        } else {
+          nameURL.style.display = 'none'
+        }
         characterCardContainer.append(card)
-        return {name: character.name, height: character.height, birth: character.birth, death: character.death, realm: character.realm, hair: character.hair, wikiUrl: character.wikiUrl, element: card}
+        
+        return {
+          name: character.name,
+          height: character.height,
+          birth: character.birth,
+          death: character.death,
+          realm: character.realm,
+          hair: character.hair,
+          wikiUrl: character.wikiUrl,
+          element: card
+        }
       })
     
     } else {
