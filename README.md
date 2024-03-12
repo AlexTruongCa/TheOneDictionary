@@ -22,3 +22,6 @@ TheOneDictionary was built using HTML, CSS, and Javascript.
 - **Current Status**: The project is currently under active development. While it offers a comprehensive experience, there are certain limitations primarily due to API availability.
 
 - **Expected Enhancements**: Efforts are ongoing to enhance the project further. As soon as the API limitations are addressed, expect significant improvements and additional functionalities to enrich the user experience.
+
+## Demo:
+https://www.loom.com/share/91d3d67c6d1b4641a8bbc130450384ae?sid=21c4456c-638b-4338-ba1c-924aab569795
